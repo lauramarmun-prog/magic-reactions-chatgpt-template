@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Magic Reactions</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --ink: #2d2340;
+        --muted: #71677f;
+        --paper: #fffaf5;
+        --panel: #f5efff;
+        --line: #dfd4ee;
+        --lilac: #7655a6;
+        --lilac-strong: #5d3c8d;
+        --lilac-soft: #e9ddfa;
+        --spark: #e4a0bd;
+        --shadow: 0 12px 32px rgba(68, 44, 92, 0.12);
+        font-family:
+          ui-rounded, "Segoe UI", system-ui, -apple-system, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+      }
+
+      body {
+        padding: 10px;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 92% 2%, rgba(228, 160, 189, 0.22), transparent 35%),
+          linear-gradient(145deg, #fffaf5, #f6efff);
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      button {
+        min-height: 44px;
+        cursor: pointer;
+      }
+
+      .shell {
+        width: min(100%, 560px);
+        margin: 0 auto;
+        padding: 16px;
+        overflow: hidden;
+        background: rgba(255, 250, 245, 0.94);
+        border: 1px solid rgba(118, 85, 166, 0.16);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .sparkle {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: var(--lilac-soft);
+        font-size: 20px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(18px, 5vw, 23px);
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .search {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 48px;
+        gap: 8px;
+      }
+
+      .search input {
+        width: 100%;
+        min-height: 46px;
+        padding: 0 14px;
+        color: var(--ink);
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        outline: none;
+      }
+
+      .search input:focus-visible {
+        border-color: var(--lilac);
+        box-shadow: 0 0 0 3px rgba(118, 85, 166, 0.16);
+      }
+
+      .search button,
+      .primary {
+        color: #fff;
+        background: var(--lilac);
+        border: 0;
+        border-radius: 14px;
+        font-weight: 750;
+      }
+
+      .search button:hover,
+      .primary:hover {
+        background: var(--lilac-strong);
+      }
+
+      .tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin: 10px 0 12px;
+        padding: 4px;
+        background: var(--panel);
+        border-radius: 14px;
+      }
+
+      .tab {
+        color: var(--muted);
+        background: transparent;
+        border: 0;
+        border-radius: 11px;
+        font-weight: 700;
+      }
+
+      .tab[aria-selected="true"] {
+        color: var(--lilac-strong);
+        background: #fff;
+        box-shadow: 0 3px 10px rgba(68, 44, 92, 0.09);
+      }
+
+      .status {
+        min-height: 20px;
+        margin: 0 2px 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .status[data-tone="error"] {
+        color: #9a3151;
+      }
+
+      .results {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+      }
+
+      .card {
+        position: relative;
+        min-width: 0;
+        aspect-ratio: 1 / 1;
+        padding: 0;
+        overflow: hidden;
+        background:
+          linear-gradient(110deg, #eee5f7 8%, #f9f3ff 18%, #eee5f7 33%);
+        background-size: 200% 100%;
+        border: 2px solid transparent;
+        border-radius: 16px;
+        animation: shimmer 1.4s linear infinite;
+      }
+
+      .card img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .card:hover,
+      .card:focus-visible {
+        border-color: var(--lilac);
+        outline: none;
+      }
+
+      .card[aria-pressed="true"] {
+        border-color: var(--spark);
+        box-shadow:
+          0 0 0 3px rgba(228, 160, 189, 0.22),
+          0 8px 20px rgba(68, 44, 92, 0.16);
+      }
+
+      .check {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        display: none;
+        width: 28px;
+        height: 28px;
+        place-items: center;
+        color: #fff;
+        background: var(--lilac);
+        border-radius: 50%;
+        box-shadow: 0 3px 10px rgba(45, 35, 64, 0.24);
+      }
+
+      .card[aria-pressed="true"] .check {
+        display: grid;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .primary {
+        padding: 0 18px;
+      }
+
+      .secondary {
+        min-width: 48px;
+        color: var(--lilac-strong);
+        background: var(--lilac-soft);
+        border: 0;
+        border-radius: 14px;
+        font-weight: 800;
+      }
+
+      .primary:disabled,
+      .secondary:disabled,
+      .search button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
+      .attribution {
+        margin: 13px 0 0;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      @keyframes shimmer {
+        to {
+          background-position-x: -200%;
+        }
+      }
+
+      @media (min-width: 500px) {
+        .results {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #f4edf9;
+          --muted: #c1b5ca;
+          --paper: #241d2b;
+          --panel: #33283f;
+          --line: #4d3d5c;
+          --lilac: #ad8bd6;
+          --lilac-strong: #c5a7e8;
+          --lilac-soft: #443353;
+          --shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+          background:
+            radial-gradient(circle at 92% 2%, rgba(228, 160, 189, 0.12), transparent 35%),
+            linear-gradient(145deg, #201923, #2b2034);
+        }
+
+        .shell {
+          background: rgba(36, 29, 43, 0.96);
+        }
+
+        .search input,
+        .tab[aria-selected="true"] {
+          color: var(--ink);
+          background: #2b2233;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div class="sparkle" aria-hidden="true">✨</div>
+        <div>
+          <h1>Magic Reactions</h1>
+          <p class="subtitle">Elige una reacción que diga justo eso.</p>
+        </div>
+      </header>
+
+      <form class="search" id="search-form" autocomplete="off">
+        <label hidden for="query">Buscar en GIPHY</label>
+        <input
+          id="query"
+          name="query"
+          maxlength="50"
+          placeholder="abrazo de gatito…"
+          required
+        />
+        <button type="submit" aria-label="Buscar">⌕</button>
+      </form>
+
+      <div class="tabs" role="tablist" aria-label="Tipo de contenido">
+        <button
+          class="tab"
+          id="sticker-tab"
+          type="button"
+          role="tab"
+          data-kind="sticker"
+          aria-selected="true"
+        >
+          Stickers
+        </button>
+        <button
+          class="tab"
+          id="gif-tab"
+          type="button"
+          role="tab"
+          data-kind="gif"
+          aria-selected="false"
+        >
+          GIFs
+        </button>
+      </div>
+
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <section class="results" id="results" aria-label="Resultados"></section>
+
+      <div class="actions">
+        <button class="primary" id="use-button" type="button" disabled>
+          Usar este ✨
+        </button>
+        <button
+          class="secondary"
+          id="another-button"
+          type="button"
+          aria-label="Buscar otras opciones"
+          title="Buscar otras opciones"
+        >
+          ↻
+        </button>
+      </div>
+
+      <p class="attribution" id="attribution" hidden>Powered by GIPHY</p>
+    </main>
+
+    <script type="module">
+      const protocolVersion = "2026-01-26";
+      const isStandalonePreview = new URLSearchParams(location.search).has(
+        "preview",
+      );
+      const state = {
+        query: "abrazo tierno",
+        kind: "sticker",
+        mode: "picker",
+        rating: "pg",
+        results: [],
+        collection: [],
+        selected: null,
+        loading: false,
+      };
+
+      const queryInput = document.querySelector("#query");
+      const searchForm = document.querySelector("#search-form");
+      const searchButton = searchForm.querySelector("button");
+      const tabButtons = [...document.querySelectorAll(".tab")];
+      const statusEl = document.querySelector("#status");
+      const resultsEl = document.querySelector("#results");
+      const useButton = document.querySelector("#use-button");
+      const anotherButton = document.querySelector("#another-button");
+      const attributionEl = document.querySelector("#attribution");
+
+      let rpcId = 0;
+      let giphyApiKey = "";
+      const pendingRequests = new Map();
+      const trackedViews = new Set();
+      const resultByElement = new WeakMap();
+
+      function rpcNotify(method, params) {
+        window.parent.postMessage({ jsonrpc: "2.0", method, params }, "*");
+      }
+
+      function rpcRequest(method, params) {
+        return new Promise((resolve, reject) => {
+          const id = ++rpcId;
+          pendingRequests.set(id, { resolve, reject });
+          window.parent.postMessage(
+            { jsonrpc: "2.0", id, method, params },
+            "*",
+          );
+        });
+      }
+
+      const bridgeReady = isStandalonePreview
+        ? Promise.resolve()
+        : rpcRequest("ui/initialize", {
+            appInfo: { name: "magic-reactions-picker", version: "0.1.0" },
+            appCapabilities: {},
+            protocolVersion,
+          }).then(() => {
+            rpcNotify("ui/notifications/initialized", {});
+          });
+
+      window.addEventListener(
+        "message",
+        (event) => {
+          if (event.source !== window.parent) return;
+          const message = event.data;
+          if (!message || message.jsonrpc !== "2.0") return;
+
+          if (message.id !== undefined) {
+            const pending = pendingRequests.get(message.id);
+            if (!pending) return;
+            pendingRequests.delete(message.id);
+            if (message.error) pending.reject(message.error);
+            else pending.resolve(message.result);
+            return;
+          }
+
+          if (message.method === "ui/notifications/tool-result") {
+            applyToolResult(message.params);
+          }
+        },
+        { passive: true },
+      );
+
+      function readGiphyConfig(value) {
+        const candidates = [
+          value?._meta?.giphy,
+          value?.giphy,
+          value?.mcp_tool_result?._meta?.giphy,
+          value?.call_tool_result?._meta?.giphy,
+          value?.mcpToolResult?._meta?.giphy,
+          value?.callToolResult?._meta?.giphy,
+          value?.mcp_tool_result?.result?._meta?.giphy,
+          value?.call_tool_result?.result?._meta?.giphy,
+        ];
+        return candidates.find((candidate) => candidate?.apiKey);
+      }
+
+      function applyGiphyConfig(value) {
+        const config = readGiphyConfig(value);
+        if (config) giphyApiKey = String(config.apiKey).trim();
+      }
+
+      function applyToolResult(result) {
+        if (!result) return;
+        applyGiphyConfig(result);
+        applyToolOutput(result.structuredContent);
+      }
+
+      function applyToolOutput(output) {
+        if (!output) return;
+        state.query = String(output.query || state.query).slice(0, 50);
+        state.kind = output.kind === "gif" ? "gif" : "sticker";
+        state.mode = output.mode === "surprise" ? "surprise" : "picker";
+        state.rating = ["g", "pg", "pg-13"].includes(output.rating)
+          ? output.rating
+          : "pg";
+        state.collection = Array.isArray(output.collection)
+          ? output.collection
+          : [];
+        queryInput.value = state.query;
+        syncTabs();
+        void searchMagic();
+      }
+
+      function syncTabs() {
+        tabButtons.forEach((button) => {
+          button.setAttribute(
+            "aria-selected",
+            String(button.dataset.kind === state.kind),
+          );
+        });
+      }
+
+      function setStatus(message, tone = "quiet") {
+        statusEl.textContent = message;
+        statusEl.dataset.tone = tone;
+      }
+
+      function setLoading(loading) {
+        state.loading = loading;
+        queryInput.disabled = loading;
+        searchButton.disabled = loading;
+        anotherButton.disabled = loading;
+        useButton.disabled = loading || !state.selected;
+      }
+
+      function renditionFor(item, large = false) {
+        const images = item.images || {};
+        const rendition = large
+          ? images.downsized_medium || images.fixed_width || images.original
+          : images.fixed_width_small || images.fixed_width || images.preview_gif;
+        return rendition?.url || "";
+      }
+
+      function normalizeResult(item) {
+        return {
+          id: item.id,
+          title: item.title || `${state.kind} de GIPHY`,
+          pageUrl: item.url || `https://giphy.com/gifs/${item.id}`,
+          previewUrl: renditionFor(item),
+          displayUrl: renditionFor(item, true),
+          analytics: item.analytics || {},
+          source: "giphy",
+          kind: state.kind,
+        };
+      }
+
+      function normalizeCollectionResult(item) {
+        return {
+          id: item.id,
+          title: item.title || "Saved reaction",
+          pageUrl: item.pageUrl || "",
+          previewUrl: item.previewUrl || item.imageUrl,
+          displayUrl: item.imageUrl,
+          analytics: {},
+          source: item.source || "custom",
+          kind: item.kind || state.kind,
+        };
+      }
+
+      function selectedReplyPrompt(selected) {
+        const kindLabel = selected.kind === "sticker" ? "sticker" : "GIF";
+        const alt =
+          String(selected.title)
+            .replace(/[\[\]\r\n]/g, " ")
+            .trim()
+            .slice(0, 80) || kindLabel;
+        const markdownImage = `![${alt}](${selected.displayUrl})`;
+        return {
+          markdownImage,
+          text:
+            `Selected this ${kindLabel}${selected.source === "giphy" ? " from GIPHY" : " from the private collection"}. ` +
+            "Muéstralo dentro de tu respuesta como imagen animada: copia " +
+            "exactamente la línea Markdown siguiente, sin convertirla en un " +
+            "enlace y sin escribir la URL por separado.\n\n" +
+            `${markdownImage}\n\n` +
+            "Después acompáñala con una sola frase breve.",
+        };
+      }
+
+      function previewTile(label, hue) {
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="hsl(${hue} 65% 88%)"/><stop offset="1" stop-color="hsl(${hue + 28} 70% 72%)"/></linearGradient></defs><rect width="300" height="300" rx="34" fill="url(#g)"/><circle cx="150" cy="126" r="58" fill="rgba(255,255,255,.54)"/><text x="150" y="145" text-anchor="middle" font-size="58">✨</text><text x="150" y="232" text-anchor="middle" font-family="system-ui" font-size="21" font-weight="700" fill="#4e3967">${label}</text></svg>`;
+        return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      }
+
+      function loadStandalonePreview() {
+        state.results = [
+          ["Abrazo", 268],
+          ["Mimitos", 286],
+          ["Jijiji", 318],
+          ["Besito", 338],
+        ].map(([title, hue], index) => ({
+          id: `preview-${index}`,
+          title,
+          pageUrl: "https://giphy.com",
+          previewUrl: previewTile(title, hue),
+          displayUrl: previewTile(title, hue),
+          analytics: {},
+          source: "custom",
+          kind: state.kind,
+        }));
+        renderResults();
+        selectResult(state.results[0]);
+        setStatus("4 pequeñas posibilidades ✨");
+      }
+
+      async function pingAnalytics(url) {
+        if (!url) return;
+        try {
+          await fetch(url, { mode: "no-cors", keepalive: true });
+        } catch {
+          // Analytics must never block the picker.
+        }
+      }
+
+      const viewObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const result = resultByElement.get(entry.target);
+            if (!result || trackedViews.has(result.id)) return;
+            trackedViews.add(result.id);
+            void pingAnalytics(result.analytics?.onload?.url);
+          });
+        },
+        { threshold: 0.55 },
+      );
+
+      function selectResult(result) {
+        state.selected = result;
+        [...resultsEl.querySelectorAll(".card")].forEach((card) => {
+          card.setAttribute(
+            "aria-pressed",
+            String(card.dataset.id === result.id),
+          );
+        });
+        useButton.disabled = false;
+        setStatus(`Elegido: ${result.title}`);
+        attributionEl.hidden = result.source !== "giphy";
+        void pingAnalytics(result.analytics?.onclick?.url);
+      }
+
+      function renderResults() {
+        viewObserver.disconnect();
+        resultsEl.replaceChildren();
+
+        state.results.forEach((result) => {
+          const card = document.createElement("button");
+          card.type = "button";
+          card.className = "card";
+          card.dataset.id = result.id;
+          card.setAttribute("aria-pressed", String(state.selected?.id === result.id));
+          card.setAttribute("aria-label", `Elegir ${result.title}`);
+
+          const image = document.createElement("img");
+          image.src = result.previewUrl;
+          image.alt = result.title;
+          image.loading = "lazy";
+          image.decoding = "async";
+
+          const check = document.createElement("span");
+          check.className = "check";
+          check.setAttribute("aria-hidden", "true");
+          check.textContent = "✓";
+
+          card.append(image, check);
+          card.addEventListener("click", () => selectResult(result));
+          resultByElement.set(card, result);
+          viewObserver.observe(card);
+          resultsEl.append(card);
+        });
+      }
+
+      async function searchCollection(query) {
+        if (state.collection.length) {
+          const initial = state.collection;
+          state.collection = [];
+          return initial;
+        }
+        try {
+          await bridgeReady;
+          const result = await rpcRequest("tools/call", {
+            name: "search_magic_collection",
+            arguments: { query, kind: state.kind, limit: 8 },
+          });
+          return result?.structuredContent?.collection || [];
+        } catch {
+          if (window.openai?.callTool) {
+            const result = await window.openai.callTool(
+              "search_magic_collection",
+              { query, kind: state.kind, limit: 8 },
+            );
+            return result?.structuredContent?.collection || [];
+          }
+          return [];
+        }
+      }
+
+      async function searchMagic(forceGiphy = false) {
+        const query = queryInput.value.trim().slice(0, 50);
+        if (!query || state.loading) return;
+        state.query = query;
+        state.selected = null;
+        state.results = [];
+        renderResults();
+        attributionEl.hidden = true;
+
+        if (!forceGiphy) {
+          setLoading(true);
+          setStatus("Searching the private collection first…");
+          const collection = await searchCollection(query);
+          state.results = collection
+            .map(normalizeCollectionResult)
+            .filter((item) => item.id && item.previewUrl && item.displayUrl);
+          if (state.results.length) {
+            renderResults();
+            setStatus(`${state.results.length} saved reaction${state.results.length === 1 ? "" : "s"}`);
+            setLoading(false);
+            return;
+          }
+          setLoading(false);
+        }
+
+        if (!giphyApiKey) {
+          setStatus(
+            "Falta configurar GIPHY_API_KEY para despertar la magia.",
+            "error",
+          );
+          return;
+        }
+
+        setLoading(true);
+        setStatus("Buscando algo con la chispa justa…");
+
+        const params = new URLSearchParams({
+          api_key: giphyApiKey,
+          rating: state.rating,
+          lang: "es",
+        });
+
+        let path;
+        if (state.mode === "surprise") {
+          params.set("s", query);
+          path = `/v1/${state.kind === "sticker" ? "stickers" : "gifs"}/translate`;
+        } else {
+          params.set("q", query);
+          params.set("limit", "8");
+          params.set("bundle", "messaging_non_clips");
+          path = `/v1/${state.kind === "sticker" ? "stickers" : "gifs"}/search`;
+        }
+
+        try {
+          const response = await fetch(
+            `https://api.giphy.com${path}?${params.toString()}`,
+          );
+          if (!response.ok) throw new Error(`GIPHY respondió ${response.status}`);
+          const payload = await response.json();
+          const items = Array.isArray(payload.data)
+            ? payload.data
+            : payload.data
+              ? [payload.data]
+              : [];
+
+          state.results = items
+            .map(normalizeResult)
+            .filter((item) => item.id && item.previewUrl);
+
+          if (!state.results.length) {
+            setStatus("No encontré ninguno. Probemos con otras palabras.");
+            return;
+          }
+
+          if (state.mode === "surprise") {
+            selectResult(state.results[0]);
+          } else {
+            setStatus(`${state.results.length} pequeñas posibilidades ✨`);
+          }
+          renderResults();
+          attributionEl.hidden = false;
+        } catch (error) {
+          setStatus(
+            error instanceof Error
+              ? `La magia tropezó: ${error.message}`
+              : "La magia tropezó al buscar.",
+            "error",
+          );
+        } finally {
+          setLoading(false);
+        }
+      }
+
+      searchForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        state.mode = "picker";
+        void searchMagic();
+      });
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          state.kind = button.dataset.kind === "gif" ? "gif" : "sticker";
+          state.mode = "picker";
+          syncTabs();
+          state.collection = [];
+          void searchMagic();
+        });
+      });
+
+      anotherButton.addEventListener("click", () => {
+        state.mode = "picker";
+        const showingCollection = state.results.some(
+          (item) => item.source !== "giphy",
+        );
+        void searchMagic(showingCollection);
+      });
+
+      useButton.addEventListener("click", async () => {
+        if (!state.selected) return;
+        if (isStandalonePreview) {
+          setStatus("Así se enviaría al chat ✨");
+          return;
+        }
+        const selected = state.selected;
+        const reply = selectedReplyPrompt(selected);
+        useButton.disabled = true;
+        useButton.textContent = "Enviando magia…";
+
+        try {
+          await bridgeReady;
+          await rpcRequest("ui/update-model-context", {
+            content: [
+              {
+                type: "text",
+                text: `Selected ${selected.source} ${selected.kind}: ${selected.title} (${selected.displayUrl})`,
+              },
+            ],
+            structuredContent: {
+              selectedReaction: {
+                id: selected.id,
+                source: selected.source,
+                kind: selected.kind,
+                title: selected.title,
+                imageUrl: selected.displayUrl,
+                markdownImage: reply.markdownImage,
+                pageUrl: selected.pageUrl,
+              },
+            },
+          });
+          await rpcRequest("ui/message", {
+            role: "user",
+            content: [
+              {
+                type: "text",
+                text: reply.text,
+              },
+            ],
+          });
+          await pingAnalytics(selected.analytics?.onsent?.url);
+          setStatus("Reaction sent ✨");
+        } catch (error) {
+          const openai = window.openai;
+          if (openai?.sendFollowUpMessage) {
+            await openai.sendFollowUpMessage({
+              prompt: reply.text,
+              scrollToBottom: true,
+            });
+            await pingAnalytics(selected.analytics?.onsent?.url);
+            setStatus("Reaction sent ✨");
+          } else {
+            setStatus("No pude entregarlo al chat. Prueba otra vez.", "error");
+          }
+        } finally {
+          useButton.textContent = "Usar este ✨";
+          useButton.disabled = false;
+        }
+      });
+
+      const initialOutput = window.openai?.toolOutput;
+      applyGiphyConfig(window.openai?.toolResponseMetadata);
+      if (isStandalonePreview) {
+        queryInput.value = "abrazo de gatito";
+        loadStandalonePreview();
+      } else if (initialOutput) {
+        applyToolOutput(initialOutput);
+      } else {
+        queryInput.value = state.query;
+        syncTabs();
+        bridgeReady.catch(() => {
+          setStatus("Esperando a que el chat despierte el widget…");
+        });
+      }
+    </script>
+  </body>
+</html>
