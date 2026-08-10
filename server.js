@@ -494,4 +494,973 @@ function registerMagicTools(server) {
                 "widget. Accompany it with at most one brief phrase and do not " +
                 "repeat the image URL.",
             },
-          ],ç}û¶‰žËkºwµçD°…Íå¹Œ€¡É•ÅÕ•ÍÐ°•áÑÉ„¤€ôøì4(€€€½¹ÍÐÉ•ÍÕ±Ð€ô…Ý…¥Ð½É¥¥¹…±1¥ÍÑQ½½±Ì¡É•ÅÕ•ÍÐ°•áÑÉ„¤ì4(€€€É•ÑÕÉ¸ì4(€€€€€€¸¸¹É•ÍÕ±Ð°4(€€€€€Ñ½½±ÌèÉ•ÍÕ±Ð¹Ñ½½±Ì¹µ…À ¡Ñ½½°¤€ôøì4(€€€€€€€½¹ÍÐÍ•ÕÉ¥ÑåM¡•µ•Ì€ôÑ½½°ü¹}µ•Ñ„ü¹Í•ÕÉ¥ÑåM¡•µ•Ìì4(€€€€€€€É•ÑÕÉ¸ÉÉ…ä¹¥ÍÉÉ…ä¡Í•ÕÉ¥ÑåM¡•µ•Ì¤4(€€€€€€€€€€üì€¸¸¹Ñ½½°°Í•ÕÉ¥ÑåM¡•µ•Ìô4(€€€€€€€€€€èÑ½½°ì4(€€€€€ô¤°4(€€€ôì4(€ô¤ì4)ô4(4)™Õ¹Ñ¥½¸ÝÉ¥Ñ•½ÉÍ!•…‘•ÉÌ¡É•Ì¤ì4(€É•Ì¹Í•Ñ!•…‘•È ‰•ÍÌµ½¹ÑÉ½°µ±±½Üµ=É¥¥¸ˆ°€ˆ¨ˆ¤ì4(€É•Ì¹Í•Ñ!•…‘•È 4(€€€€‰•ÍÌµ½¹ÑÉ½°µ±±½Üµ!•…‘•ÉÌˆ°4(€€€€‰…ÕÑ¡½É¥é…Ñ¥½¸°½¹Ñ•¹ÐµÑåÁ”°µÀµÍ•ÍÍ¥½¸µ¥°µÀµÁÉ½Ñ½½°µÙ•ÉÍ¥½¸ˆ°4(€€¤ì4(€É•Ì¹Í•Ñ!•…‘•È 4(€€€€‰•ÍÌµ½¹ÑÉ½°µáÁ½Í”µ!•…‘•ÉÌˆ°4(€€€€‰5ÀµM•ÍÍ¥½¸µ%°5@µAÉ½Ñ½½°µY•ÉÍ¥½¸ˆ°4(€€¤ì4)ô4(4)™Õ¹Ñ¥½¸©Í½¸¡É•Ì°ÍÑ…ÑÕÌ°Ù…±Õ”¤ì(€É•Ì4(€€€€¹ÝÉ¥Ñ•!•…¡ÍÑ…ÑÕÌ°ì4(€€€€€€‰½¹Ñ•¹ÐµÑåÁ”ˆè€‰…ÁÁ±¥…Ñ¥½¸½©Í½¸ì¡…ÉÍ•ÐõÕÑ˜´àˆ°4(€€€€€€‰…¡”µ½¹ÑÉ½°ˆè€‰¹¼µÍÑ½É”ˆ°4(€€€ô¤4(€€€€¹•¹¡)M=8¹ÍÑÉ¥¹¥™ä¡Ù…±Õ”¤¤ì4)ô4(4)…Íå¹Œ™Õ¹Ñ¥½¸É•…‘)Í½¸¡É•Ä°µ…á	åÑ•Ì€ô€ÄÈ€¨€ÄÀÈÐ€¨€ÄÀÈÐ¤ì(€½¹ÍÐ¡Õ¹­Ì€ômtì4(€±•ÐÍ¥é”€ô€Àì4(€™½È…Ý…¥Ð€¡½¹ÍÐ¡Õ¹¬½˜É•Ä¤ì4(€€€Í¥é”€¬ô¡Õ¹¬¹‰åÑ•1•¹Ñ ì4(€€€¥˜€¡Í¥é”€øµ…á	åÑ•Ì¤Ñ¡É½Ü¹•ÜÉÉ½È ‰1„Á•Ñ¥§Í¸•Ì‘•µ…Í¥…‘¼É…¹‘”¸ˆ¤ì4(€€€¡Õ¹­Ì¹ÁÕÍ ¡¡Õ¹¬¤ì4(€ô4(€¥˜€ …¡Õ¹­Ì¹±•¹Ñ ¤É•ÑÕÉ¸íôì4(€ÑÉäì4(€€€É•ÑÕÉ¸)M=8¹Á…ÉÍ”¡	Õ™™•È¹½¹…Ð¡¡Õ¹­Ì¤¹Ñ½MÑÉ¥¹œ ‰ÕÑ˜àˆ¤¤ì4(€ô…Ñ ì4(€€€Ñ¡É½Ü¹•ÜÉÉ½È ‰°½¹Ñ•¹¥‘¼•¹Ù¥…‘¼¹¼•Ì)M=8Û…±¥‘¼¸ˆ¤ì4(€ô4)ô()™Õ¹Ñ¥½¸ÝÉ¥Ñ•]¥‘•Ñ¥…¹½ÍÑ¥!•…‘•ÉÌ¡É•Ì¤ì(€É•Ì¹Í•Ñ!•…‘•È ‰•ÍÌµ½¹ÑÉ½°µ±±½Üµ=É¥¥¸ˆ°€ˆ¨ˆ¤ì(€É•Ì¹Í•Ñ!•…‘•È ‰•ÍÌµ½¹ÑÉ½°µ±±½Üµ5•Ñ¡½‘Ìˆ°€‰A=MP°=AQ%=9Lˆ¤ì(€É•Ì¹Í•Ñ!•…‘•È ‰…¡”µ½¹ÑÉ½°ˆ°€‰¹¼µÍÑ½É”ˆ¤ì(€É•Ì¹Í•Ñ!•…‘•È ‰É½ÍÌµ=É¥¥¸µI•Í½ÕÉ”µA½±¥äˆ°€‰É½ÍÌµ½É¥¥¸ˆ¤ì)ô()™Õ¹Ñ¥½¸Ý¥‘•Ñ¥…¹½ÍÑ¥!…Í	½‘ä¡É•Ä¤ì(€½¹ÍÐ½¹Ñ•¹Ñ1•¹Ñ €ôMÑÉ¥¹œ¡É•Ä¹¡•…‘•ÉÍl‰½¹Ñ•¹Ðµ±•¹Ñ ‰tñð€ˆÀˆ¤ì(€¥˜€¡½¹Ñ•¹Ñ1•¹Ñ €„ôô€ˆÀˆ¤ì(€€€É•Ä¹É•ÍÕµ” ¤ì(€€€É•ÑÕÉ¸AÉ½µ¥Í”¹É•Í½±Ù”¡ÑÉÕ”¤ì(€ô(€¥˜€ …É•Ä¹¡•…‘•ÉÍl‰ÑÉ…¹Í™•Èµ•¹½‘¥¹œ‰t¤É•ÑÕÉ¸AÉ½µ¥Í”¹É•Í½±Ù”¡™…±Í”¤ì((€É•ÑÕÉ¸¹•ÜAÉ½µ¥Í” ¡É•Í½±Ù”¤€ôøì(€€€±•ÐÍ•ÑÑ±•€ô™…±Í”ì(€€€±•ÐÑ¥µ•½ÕÐì(€€€½¹ÍÐ™¥¹¥Í €ô€¡¡…Í	½‘ä¤€ôøì(€€€€€¥˜€¡Í•ÑÑ±•¤É•ÑÕÉ¸ì(€€€€€Í•ÑÑ±•€ôÑÉÕ”ì(€€€€€±•…ÉQ¥µ•½ÕÐ¡Ñ¥µ•½ÕÐ¤ì(€€€€€É•Ä¹É•µ½Ù•1¥ÍÑ•¹•È ‰‘…Ñ„ˆ°½¹…Ñ„¤ì(€€€€€É•Ä¹É•µ½Ù•1¥ÍÑ•¹•È ‰•¹ˆ°½¹¹¤ì(€€€€€É•Ä¹É•µ½Ù•1¥ÍÑ•¹•È ‰•ÉÉ½Èˆ°½¹ÉÉ½È¤ì(€€€€€É•Í½±Ù”¡¡…Í	½‘ä¤ì(€€€ôì(€€€½¹ÍÐ½¹…Ñ„€ô€¡¡Õ¹¬¤€ôøì(€€€€€¥˜€ …¡Õ¹¬¹‰åÑ•1•¹Ñ ¤É•ÑÕÉ¸ì(€€€€€™¥¹¥Í ¡ÑÉÕ”¤ì(€€€€€É•Ä¹É•ÍÕµ” ¤ì(€€€ôì(€€€½¹ÍÐ½¹¹€ô€ ¤€ôø™¥¹¥Í ¡™…±Í”¤ì(€€€½¹ÍÐ½¹ÉÉ½È€ô€ ¤€ôø™¥¹¥Í ¡ÑÉÕ”¤ì(€€€É•Ä¹½¸ ‰‘…Ñ„ˆ°½¹…Ñ„¤ì(€€€É•Ä¹½¸ ‰•¹ˆ°½¹¹¤ì(€€€É•Ä¹½¸ ‰•ÉÉ½Èˆ°½¹ÉÉ½È¤ì(€€€Ñ¥µ•½ÕÐ€ôÍ•ÑQ¥µ•½ÕÐ  ¤€ôøì(€€€€€™¥¹¥Í ¡ÑÉÕ”¤ì(€€€€€É•Ä¹É•ÍÕµ” ¤ì(€€€ô°€ÄÀÀ¤ì(€ô¤ì)ô()±•ÐÝ¥‘•Ñ¥…¹½ÍÑ¥]¥¹‘½ÝMÑ…ÉÑ•‘Ð€ô€Àì)±•ÐÝ¥‘•Ñ¥…¹½ÍÑ¥1½½Õ¹Ð€ô€Àì()™Õ¹Ñ¥½¸±½]¥‘•Ñ¥…¹½ÍÑ¥Œ¡ÍÑ…”¤ì(€½¹ÍÐ¹½Ü€ô…Ñ”¹¹½Ü ¤ì(€¥˜€¡¹½Ü€´Ý¥‘•Ñ¥…¹½ÍÑ¥]¥¹‘½ÝMÑ…ÉÑ•‘Ð€øô€ØÁ|ÀÀÀ¤ì(€€€Ý¥‘•Ñ¥…¹½ÍÑ¥]¥¹‘½ÝMÑ…ÉÑ•‘Ð€ô¹½Üì(€€€Ý¥‘•Ñ¥…¹½ÍÑ¥1½½Õ¹Ð€ô€Àì(€ô(€¥˜€¡Ý¥‘•Ñ¥…¹½ÍÑ¥1½½Õ¹Ð€øô]%Q}%9=MQ%}1=}1%5%P¤É•ÑÕÉ¸ì(€Ý¥‘•Ñ¥…¹½ÍÑ¥1½½Õ¹Ð€¬ô€Äì(€½¹Í½±”¹¥¹™¼¡m]%QtØôÄÍÑ…”ô‘íÍÑ…•õ€¤ì)ô()™Õ¹Ñ¥½¸Í…™•5Á5•Ñ¡½‘½É1½œ¡µ•ÍÍ…”°¡ÑÑÁ5•Ñ¡½¤ì(€¥˜€¡¡ÑÑÁ5•Ñ¡½€ôôô€‰Pˆ¤É•ÑÕÉ¸€‰¡ÑÑÀµ•Ðˆì(€¥˜€¡¡ÑÑÁ5•Ñ¡½€ôôô€‰1Qˆ¤É•ÑÕÉ¸€‰¡ÑÑÀµ‘•±•Ñ”ˆì(€¥˜€¡¡ÑÑÁ5•Ñ¡½€„ôô€‰A=MPˆ¤É•ÑÕÉ¸€‰½Ñ¡•Èˆì(€¥˜€¡ÉÉ…ä¹¥ÍÉÉ…ä¡µ•ÍÍ…”¤¤É•ÑÕÉ¸€‰‰…Ñ ˆì((€½¹ÍÐµ•Ñ¡½€ôÑåÁ•½˜µ•ÍÍ…”ü¹µ•Ñ¡½€ôôô€‰ÍÑÉ¥¹œˆ€üµ•ÍÍ…”¹µ•Ñ¡½€è€ˆˆì(€¥˜€ …µ•Ñ¡½¤É•ÑÕÉ¸€‰Õ¹­¹½Ý¸ˆì(€É•ÑÕÉ¸%9=MQ%}5A}5Q!=L¹¡…Ì¡µ•Ñ¡½¤€üµ•Ñ¡½€è€‰½Ñ¡•Èˆì)ô()™Õ¹Ñ¥½¸‰•¥¹5ÁI•ÅÕ•ÍÑ1½œ¡É•Ä°É•Ì°…ÕÑ¡MÑ…Ñ”¤ì(€½¹ÍÐÍÑ…ÉÑ•‘Ð€ô…Ñ”¹¹½Ü ¤ì(€½¹ÍÐÍÑ…Ñ”€ôì(€€€ÉÁ5•Ñ¡½èÍ…™•5Á5•Ñ¡½‘½É1½œ¡Õ¹‘•™¥¹•°É•Ä¹µ•Ñ¡½¤°(€€€…ÕÑ¡I•ÍÕ±Ðè€‰¡•­¥¹œˆ°(€ôì(€±•Ð•µ¥ÑÑ•€ô™…±Í”ì((€½¹ÍÐ•µ¥Ð€ô€¡ÍÑ…ÑÕÌ°½ÕÑ½µ”¤€ôøì(€€€¥˜€¡•µ¥ÑÑ•¤É•ÑÕÉ¸ì(€€€•µ¥ÑÑ•€ôÑÉÕ”ì(€€€½¹Í½±”¹¥¹™¼ (€€€€€m5AtÉ•ÅÕ•ÍÐÉÁŒô‘íÍÑ…Ñ”¹ÉÁ5•Ñ¡½‘ô¡ÑÑÀô‘íÉ•Ä¹µ•Ñ¡½ñð€‰U9-9=]8‰ô€€¬(€€€€€€€…ÕÑ ô‘í…ÕÑ¡MÑ…Ñ•ô…ÕÑ¡I•ÍÕ±Ðô‘íÍÑ…Ñ”¹…ÕÑ¡I•ÍÕ±ÑôÍÑ…ÑÕÌô‘íÍÑ…ÑÕÍô€€¬(€€€€€€€½ÕÑ½µ”ô‘í½ÕÑ½µ•ô‘ÕÉ…Ñ¥½¹5Ìô‘í…Ñ”¹¹½Ü ¤€´ÍÑ…ÉÑ•‘Ñõ€°(€€€€¤ì(€ôì((€É•Ì¹½¹” ‰™¥¹¥Í ˆ°€ ¤€ôø•µ¥Ð¡É•Ì¹ÍÑ…ÑÕÍ½‘”°€‰™¥¹¥Í¡•ˆ¤¤ì(€É•Ì¹½¹” ‰±½Í”ˆ°€ ¤€ôøì(€€€¥˜€ …É•Ì¹ÝÉ¥Ñ…‰±•¥¹¥Í¡•¤•µ¥Ð ‰¥¹Ñ•ÉÉÕÁÑ•ˆ°€‰¥¹Ñ•ÉÉÕÁÑ•ˆ¤ì(€ô¤ì((€É•ÑÕÉ¸ÍÑ…Ñ”ì)ô()™Õ¹Ñ¥½¸É•©•Ñ•‘5Á5•Ñ¡½‘½É1½œ¡É•Ä¤ì(€¥˜€¡É•Ä¹µ•Ñ¡½€„ôô€‰A=MPˆ¤ì(€€€É•ÑÕÉ¸AÉ½µ¥Í”¹É•Í½±Ù”¡Í…™•5Á5•Ñ¡½‘½É1½œ¡Õ¹‘•™¥¹•°É•Ä¹µ•Ñ¡½¤¤ì(€ô((€É•ÑÕÉ¸¹•ÜAÉ½µ¥Í” ¡É•Í½±Ù”¤€ôøì(€€€½¹ÍÐ¡Õ¹­Ì€ômtì(€€€±•ÐÍ¥é”€ô€Àì(€€€±•ÐÍ•ÑÑ±•€ô™…±Í”ì(€€€±•ÐÑ¥µ•Èì((€€€½¹ÍÐ±•…¹ÕÀ€ô€ ¤€ôøì(€€€€€¥˜€¡Ñ¥µ•È¤±•…ÉQ¥µ•½ÕÐ¡Ñ¥µ•È¤ì(€€€€€É•Ä¹É•µ½Ù•1¥ÍÑ•¹•È ‰‘…Ñ„ˆ°½¹…Ñ„¤ì(€€€€€É•Ä¹É•µ½Ù•1¥ÍÑ•¹•È ‰•¹ˆ°½¹¹¤ì(€€€€€É•Ä¹É•µ½Ù•1¥ÍÑ•¹•È ‰•ÉÉ½Èˆ°½¹ÉÉ½È¤ì(€€€€€É•Ä¹É•µ½Ù•1¥ÍÑ•¹•È ‰…‰½ÉÑ•ˆ°½¹‰½ÉÑ•¤ì(€€€ôì((€€€½¹ÍÐ™¥¹¥Í €ô€¡ÉÁ5•Ñ¡½°‘É…¥¸€ô™…±Í”¤€ôøì(€€€€€¥˜€¡Í•ÑÑ±•¤É•ÑÕÉ¸ì(€€€€€Í•ÑÑ±•€ôÑÉÕ”ì(€€€€€±•…¹ÕÀ ¤ì(€€€€€¥˜€¡‘É…¥¸€˜˜€…É•Ä¹‘•ÍÑÉ½å•¤É•Ä¹É•ÍÕµ” ¤ì(€€€€€É•Í½±Ù”¡ÉÁ5•Ñ¡½¤ì(€€€ôì((€€€½¹ÍÐ½¹…Ñ„€ô€¡¡Õ¹¬¤€ôøì(€€€€€Í¥é”€¬ô¡Õ¹¬¹‰åÑ•1•¹Ñ ì(€€€€€¥˜€¡Í¥é”€ø5a}I)Q}5A}1=}	=e}	eQL¤ì(€€€€€€€™¥¹¥Í  ‰Õ¹­¹½Ý¸ˆ°ÑÉÕ”¤ì(€€€€€€€É•ÑÕÉ¸ì(€€€€€ô(€€€€€¡Õ¹­Ì¹ÁÕÍ ¡	Õ™™•È¹¥Í	Õ™™•È¡¡Õ¹¬¤€ü¡Õ¹¬€è	Õ™™•È¹™É½´¡¡Õ¹¬¤¤ì(€€€ôì((€€€½¹ÍÐ½¹¹€ô€ ¤€ôøì(€€€€€ÑÉäì(€€€€€€€½¹ÍÐ‰½‘ä€ô¡Õ¹­Ì¹±•¹Ñ (€€€€€€€€€€ü)M=8¹Á…ÉÍ”¡	Õ™™•È¹½¹…Ð¡¡Õ¹­Ì¤¹Ñ½MÑÉ¥¹œ ‰ÕÑ˜àˆ¤¤(€€€€€€€€€€èíôì(€€€€€€€™¥¹¥Í ¡Í…™•5Á5•Ñ¡½‘½É1½œ¡‰½‘ä°É•Ä¹µ•Ñ¡½¤¤ì(€€€€€ô…Ñ ì(€€€€€€€™¥¹¥Í  ‰Õ¹­¹½Ý¸ˆ¤ì(€€€€€ô(€€€ôì((€€€½¹ÍÐ½¹ÉÉ½È€ô€ ¤€ôø™¥¹¥Í  ‰Õ¹­¹½Ý¸ˆ¤ì(€€€½¹ÍÐ½¹‰½ÉÑ•€ô€ ¤€ôø™¥¹¥Í  ‰Õ¹­¹½Ý¸ˆ¤ì((€€€Ñ¥µ•È€ôÍ•ÑQ¥µ•½ÕÐ (€€€€€€ ¤€ôø™¥¹¥Í  ‰Õ¹­¹½Ý¸ˆ°ÑÉÕ”¤°(€€€€€5a}I)Q}5A}1=}]%Q}5L°(€€€€¤ì(€€€Ñ¥µ•È¹Õ¹É•˜ü¸ ¤ì(€€€É•Ä¹½¸ ‰‘…Ñ„ˆ°½¹…Ñ„¤ì(€€€É•Ä¹½¹” ‰•¹ˆ°½¹¹¤ì(€€€É•Ä¹½¹” ‰•ÉÉ½Èˆ°½¹ÉÉ½È¤ì(€€€É•Ä¹½¹” ‰…‰½ÉÑ•ˆ°½¹‰½ÉÑ•¤ì(€ô¤ì)ô(4)™Õ¹Ñ¥½¸É•ÅÕ¥É•½±±•Ñ¥½¹‘µ¥¸¡É•Ä°É•Ì¤ì(€¥˜€¡¥Í½±±•Ñ¥½¹‘µ¥¸¡É•Ä¤¤É•ÑÕÉ¸ÑÉÕ”ì(€©Í½¸¡É•Ì°€ÐÀÄ°ì•ÉÉ½Èè€‰Q¡”½Ý¹•È½‘”¥Ì¹½Ð½ÉÉ•Ð¸ˆô¤ì(€É•ÑÕÉ¸™…±Í”ì4)ô4(4)™Õ¹Ñ¥½¸¥Á¡å%‘É½´¡Ù…±Õ”¤ì4(€½¹ÍÐÉ…Ü€ôMÑÉ¥¹œ¡Ù…±Õ”ñð€ˆˆ¤¹ÑÉ¥´ ¤ì4(€¥˜€ ½ym„µéµhÀ´å|µuìÌ°ÄÀÁô¼¹Ñ•ÍÐ¡É…Ü¤¤É•ÑÕÉ¸É…Üì4(€ÑÉäì4(€€€½¹ÍÐÕÉ°€ô¹•ÜUI0¡É…Ü¤ì4(€€€½¹ÍÐ±…ÍÐ€ôÕÉ°¹Á…Ñ¡¹…µ”¹ÍÁ±¥Ð ˆ´ˆ¤¹…Ð ´Ä¤ü¹ÍÁ±¥Ð ˆ¼ˆ¤¹™¥±Ñ•È¡	½½±•…¸¤¹…Ð ´Ä¤ì4(€€€É•ÑÕÉ¸€½ym„µéµhÀ´å|µuìÌ°ÄÀÁô¼¹Ñ•ÍÐ¡±…ÍÐñð€ˆˆ¤€ü±…ÍÐ€è€ˆˆì4(€ô…Ñ ì4(€€€É•ÑÕÉ¸€ˆˆì4(€ô4)ô4(4)…Íå¹Œ™Õ¹Ñ¥½¸¥µÁ½ÉÑ¥Á¡åI•…Ñ¥½¸¡¥¹ÁÕÐ¤ì4(€½¹ÍÐ­¥¹€ô¥¹ÁÕÐ¹­¥¹€ôôô€‰ÍÑ¥­•Èˆ€ü€‰ÍÑ¥­•Èˆ€è€‰¥˜ˆì4(€½¹ÍÐ¥€ô¥Á¡å%‘É½´¡¥¹ÁÕÐ¹¥Á¡å%ñð¥¹ÁÕÐ¹ÕÉ°¤ì4(€¥˜€ …¥¤Ñ¡É½Ü¹•ÜÉÉ½È ‰9¼ÁÕ‘”É•½¹½•È•°%¼•¹±…”‘”%A!d¸ˆ¤ì4(€½¹ÍÐÁ…å±½…€ô…Ý…¥Ð•Ñ¥Á¡å	å%¡ì¥°­¥¹ô¤ì4(€½¹ÍÐ¥Ñ•´€ôÁ…å±½…ü¹‘…Ñ„ì4(€½¹ÍÐ¥µ…•UÉ°€ô¥Á¡å%µ…•UÉ°¡¥Ñ•´¤ì4(€¥˜€ …¥Ñ•´ü¹¥ñð€…¥µ…•UÉ°¤Ñ¡É½Ü¹•ÜÉÉ½È ‰%A!d¹¼‘•Ù½±Ù§Ì•Í„É•…§Í¸¸ˆ¤ì4(€É•ÑÕÉ¸É•…Ñ•¥Á¡åI•…Ñ¥½¸¡ì4(€€€€¸¸¹¥¹ÁÕÐ°4(€€€­¥¹°4(€€€¥Á¡å%è¥Ñ•´¹¥°4(€€€Ñ¥Ñ±”è¥¹ÁÕÐ¹Ñ¥Ñ±”ñð¥Ñ•´¹Ñ¥Ñ±”ñð€‘í­¥¹‘ô‘”%A!e€°4(€€€¥µ…•UÉ°°4(€€€ÁÉ•Ù¥•ÝUÉ°è¥Á¡åAÉ•Ù¥•ÝUÉ°¡¥Ñ•´¤ñð¥µ…•UÉ°°4(€€€Á…•UÉ°è¥Ñ•´¹ÕÉ°ñð¡ÑÑÁÌè¼½¥Á¡ä¹½´½¥™Ì¼‘í¥Ñ•´¹¥‘õ€°4(€ô¤ì4)ô4(4)½¹ÍÐ¡ÑÑÁM•ÉÙ•È€ôÉ•…Ñ•M•ÉÙ•È¡…Íå¹Œ€¡É•Ä°É•Ì¤€ôøì4(€¥˜€ …É•Ä¹ÕÉ°¤ì4(€€€É•Ì¹ÝÉ¥Ñ•!•… ÐÀÀ¤¹•¹ ‰5¥ÍÍ¥¹œUI0ˆ¤ì4(€€€É•ÑÕÉ¸ì4(€ô4(4(€½¹ÍÐÕÉ°€ô¹•ÜUI0¡É•Ä¹ÕÉ°°¡ÑÑÀè¼¼‘íÉ•Ä¹¡•…‘•ÉÌ¹¡½ÍÐ€üü€‰±½…±¡½ÍÐ‰õ€¤ì((€¥˜€¡…Ý…¥Ð¡…¹‘±•=ÕÑ¡I•ÅÕ•ÍÐ¡É•Ä°É•Ì°ÕÉ°¤¤É•ÑÕÉ¸ì(4(€¥˜€¡É•Ä¹µ•Ñ¡½€ôôô€‰=AQ%=9Lˆ€˜˜ÕÉ°¹Á…Ñ¡¹…µ”€ôôô5A}AQ ¤ì(€€€ÝÉ¥Ñ•½ÉÍ!•…‘•ÉÌ¡É•Ì¤ì4(€€€É•Ì¹Í•Ñ!•…‘•È ‰•ÍÌµ½¹ÑÉ½°µ±±½Üµ5•Ñ¡½‘Ìˆ°€‰A=MP°P°1Q°=AQ%=9Lˆ¤ì4(€€€É•Ì¹ÝÉ¥Ñ•!•… ÈÀÐ¤¹•¹ ¤ì4(€€€É•ÑÕÉ¸ì(€ô((€¥˜€ (€€€É•Ä¹µ•Ñ¡½€ôôô€‰=AQ%=9Lˆ€˜˜(€€€ÕÉ°¹Á…Ñ¡¹…µ”€ôôô]%Q}%9=MQ%}AQ (€€¤ì(€€€ÝÉ¥Ñ•]¥‘•Ñ¥…¹½ÍÑ¥!•…‘•ÉÌ¡É•Ì¤ì(€€€É•Ì¹ÝÉ¥Ñ•!•… ÈÀÐ¤¹•¹ ¤ì(€€€É•ÑÕÉ¸ì(€ô((€¥˜€ (€€€É•Ä¹µ•Ñ¡½€ôôô€‰A=MPˆ€˜˜(€€€ÕÉ°¹Á…Ñ¡¹…µ”€ôôô]%Q}%9=MQ%}AQ (€€¤ì(€€€ÝÉ¥Ñ•]¥‘•Ñ¥…¹½ÍÑ¥!•…‘•ÉÌ¡É•Ì¤ì(€€€½¹ÍÐÅÕ•Éä€ôl¸¸¹ÕÉ°¹Í•…É¡A…É…µÌ¹•¹ÑÉ¥•Ì ¥tì(€€€½¹ÍÐÍÑ…”€ôÅÕ•Éä¹±•¹Ñ €ôôô€Ä€˜˜ÅÕ•ÉålÁulÁt€ôôô€‰ÍÑ…”ˆ(€€€€€€üÅÕ•ÉålÁulÅt(€€€€€€è€ˆˆì(€€€¥˜€¡…Ý…¥ÐÝ¥‘•Ñ¥…¹½ÍÑ¥!…Í	½‘ä¡É•Ä¤¤ì(€€€€€É•Ì¹ÝÉ¥Ñ•!•… ÐÄÌ¤¹•¹ ¤ì(€€€€€É•ÑÕÉ¸ì(€€€ô(€€€¥˜€ …]%Q}%9=MQ%}MQL¹¡…Ì¡ÍÑ…”¤¤ì(€€€€€É•Ì¹ÝÉ¥Ñ•!•… ÐÀÀ¤¹•¹ ¤ì(€€€€€É•ÑÕÉ¸ì(€€€ô(€€€±½]¥‘•Ñ¥…¹½ÍÑ¥Œ¡ÍÑ…”¤ì(€€€É•Ì¹ÝÉ¥Ñ•!•… ÈÀÐ¤¹•¹ ¤ì(€€€É•ÑÕÉ¸ì(€ô(4(€¥˜€ 4(€€€É•Ä¹µ•Ñ¡½€ôôô€‰Pˆ€˜˜4(€€€€¡ÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ¼ˆñðÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ½¡•…±Ñ ˆ¤4(€€¤ì4(€€€½¹ÍÐ‰½‘ä€ô)M=8¹ÍÑÉ¥¹¥™ä¡ì4(€€€€€¹…µ”èAA}95°4(€€€€€Ù•ÉÍ¥½¸èAA}YIM%=8°4(€€€€€ÍÑ…ÑÕÌè€‰½¬ˆ°4(€€€€€¥Á¡å½¹™¥ÕÉ•è	½½±•…¸¡ÁÉ½•ÍÌ¹•¹Ø¹%A!e}A%}-dü¹ÑÉ¥´ ¤¤°4(€€€€€½±±•Ñ¥½¹½¹™¥ÕÉ•è½±±•Ñ¥½¹½¹™¥ÕÉ• ¤°4(€€€€€½±±•Ñ¥½¹‘µ¥¹½¹™¥ÕÉ•è½±±•Ñ¥½¹‘µ¥¹½¹™¥ÕÉ• ¤°4(€€€€€½…ÕÑ¡½¹™¥ÕÉ•è½…ÕÑ¡½¹™¥ÕÉ• ¤°4(€€€€€µÀè5A}AQ °4(€€€ô¤ì4(€€€É•Ì4(€€€€€€¹ÝÉ¥Ñ•!•… ÈÀÀ°ì€‰½¹Ñ•¹ÐµÑåÁ”ˆè€‰…ÁÁ±¥…Ñ¥½¸½©Í½¸ì¡…ÉÍ•ÐõÕÑ˜´àˆô¤4(€€€€€€¹•¹¡‰½‘ä¤ì4(€€€É•ÑÕÉ¸ì4(€ô4(4(€¥˜€¡É•Ä¹µ•Ñ¡½€ôôô€‰Pˆ€˜˜ÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ½ÁÉ•Ù¥•Üˆ¤ì4(€€€É•Ì4(€€€€€€¹ÝÉ¥Ñ•!•… ÈÀÀ°ì€‰½¹Ñ•¹ÐµÑåÁ”ˆè€‰Ñ•áÐ½¡Ñµ°ì¡…ÉÍ•ÐõÕÑ˜´àˆô¤4(€€€€€€¹•¹¡É•¹‘•É]¥‘•Ñ!Ñµ° ¤¤ì4(€€€É•ÑÕÉ¸ì4(€ô4(4(€¥˜€¡É•Ä¹µ•Ñ¡½€ôôô€‰Pˆ€˜˜ÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ½ÁÉ•Ù¥•Ü½É•…Ñ¥½¸ˆ¤ì(€€€É•Ì(€€€€€€¹ÝÉ¥Ñ•!•… ÈÀÀ°ì€‰½¹Ñ•¹ÐµÑåÁ”ˆè€‰Ñ•áÐ½¡Ñµ°ì¡…ÉÍ•ÐõÕÑ˜´àˆô¤(€€€€€€¹•¹¡É•¹‘•ÉI•…Ñ¥½¹!Ñµ° ¤¤ì(€€€É•ÑÕÉ¸ì(€ô((€¥˜€¡É•Ä¹µ•Ñ¡½€ôôô€‰Pˆ€˜˜ÕÉ°¹Á…Ñ¡¹…µ”¹ÍÑ…ÉÑÍ]¥Ñ  ˆ½…Á¤½‘•Øµ…ÍÍ•ÑÌ¼ˆ¤¤ì(€€€¥˜€¡ÍÑ½É…•É¥Ù•È ¤€„ôô€‰µ•µ½Éäˆ¤ì(€€€€€É•Ì¹ÝÉ¥Ñ•!•… ÐÀÐ¤¹•¹ ‰9½Ð½Õ¹ˆ¤ì(€€€€€É•ÑÕÉ¸ì(€€€ô(€€€½¹ÍÐ­•ä€ô‘•½‘•UI%½µÁ½¹•¹Ð¡ÕÉ°¹Á…Ñ¡¹…µ”¹Í±¥” ˆ½…Á¤½‘•Øµ…ÍÍ•ÑÌ¼ˆ¹±•¹Ñ ¤¤ì(€€€½¹ÍÐ½‰©•Ð€ôµ•µ½Éå=‰©•Ð¡­•ä¤ì(€€€¥˜€ …½‰©•Ð¤ì(€€€€€É•Ì¹ÝÉ¥Ñ•!•… ÐÀÐ¤¹•¹ ‰9½Ð½Õ¹ˆ¤ì(€€€€€É•ÑÕÉ¸ì(€€€ô(€€€É•Ì(€€€€€€¹ÝÉ¥Ñ•!•… ÈÀÀ°ì(€€€€€€€€‰½¹Ñ•¹ÐµÑåÁ”ˆè½‰©•Ð¹½¹Ñ•¹ÑQåÁ”°(€€€€€€€€‰…¡”µ½¹ÑÉ½°ˆè€‰ÁÉ¥Ù…Ñ”°µ…àµ…”ôØÀˆ°(€€€€€ô¤(€€€€€€¹•¹¡½‰©•Ð¹‰åÑ•Ì¤ì(€€€É•ÑÕÉ¸ì(€ô(4(€¥˜€¡É•Ä¹µ•Ñ¡½€ôôô€‰Pˆ€˜˜ÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ½½±•¥½¸ˆ¤ì4(€€€É•Ì4(€€€€€€¹ÝÉ¥Ñ•!•… ÈÀÀ°ì4(€€€€€€€€‰½¹Ñ•¹ÐµÑåÁ”ˆè€‰Ñ•áÐ½¡Ñµ°ì¡…ÉÍ•ÐõÕÑ˜´àˆ°4(€€€€€€€€‰…¡”µ½¹ÑÉ½°ˆè€‰¹¼µÍÑ½É”ˆ°4(€€€€€€€€‰½¹Ñ•¹ÐµÍ•ÕÉ¥ÑäµÁ½±¥äˆè4(€€€€€€€€€€‰‘•™…Õ±ÐµÍÉŒ€Í•±˜œì¥µœµÍÉŒ€Í•±˜œ‘…Ñ„è‰±½ˆè¡ÑÑÁÌèì€ˆ€¬4(€€€€€€€€€€‰ÍÑå±”µÍÉŒ€Í•±˜œ€Õ¹Í…™”µ¥¹±¥¹”œìÍÉ¥ÁÐµÍÉŒ€Í•±˜œ€Õ¹Í…™”µ¥¹±¥¹”œì€ˆ€¬4(€€€€€€€€€€‰½¹¹•ÐµÍÉŒ€Í•±˜œì‰…Í”µÕÉ¤€¹½¹”œì™É…µ”µ…¹•ÍÑ½ÉÌ€¹½¹”œˆ°4(€€€€€ô¤4(€€€€€€¹•¹¡½±±•Ñ¥½¹‘µ¥¹Q•µÁ±…Ñ”¤ì4(€€€É•ÑÕÉ¸ì4(€ô4(4(€¥˜€ 4(€€€É•Ä¹µ•Ñ¡½€ôôô€‰Pˆ€˜˜4(€€€€¡ÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ¼¹Ý•±°µ­¹½Ý¸½½…ÕÑ µÁÉ½Ñ•Ñ•µÉ•Í½ÕÉ”ˆñð4(€€€€€ÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ¼¹Ý•±°µ­¹½Ý¸½½…ÕÑ µÁÉ½Ñ•Ñ•µÉ•Í½ÕÉ”½µÀˆ¤4(€€¤ì4(€€€©Í½¸¡É•Ì°€ÈÀÀ°ÁÉ½Ñ•Ñ•‘I•Í½ÕÉ•5•Ñ…‘…Ñ„ ¤¤ì4(€€€É•ÑÕÉ¸ì4(€ô4(4(€¥˜€¡É•Ä¹µ•Ñ¡½€ôôô€‰Pˆ€˜˜ÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ½…Á¤½½±±•Ñ¥½¸ˆ¤ì(€€€¥˜€ …É•ÅÕ¥É•½±±•Ñ¥½¹‘µ¥¸¡É•Ä°É•Ì¤¤É•ÑÕÉ¸ì(€€€ÑÉäì(€€€€€½¹ÍÐ¥Ñ•µÌ€ôÕÉ°¹Í•…É¡A…É…µÌ¹•Ð ‰…±°ˆ¤€ôôô€ˆÄˆ(€€€€€€€€ü…Ý…¥Ð±¥ÍÑ½±±•Ñ¥½¸¡ì…Ñ¥Ù•=¹±äè™…±Í”ô¤(€€€€€€€€è…Ý…¥ÐÍ•…É¡½±±•Ñ¥½¸¡ì4(€€€€€€€€€€€ÅÕ•ÉäèÕÉ°¹Í•…É¡A…É…µÌ¹•Ð ‰ÅÕ•Éäˆ¤ñð€ˆˆ°4(€€€€€€€€€€€­¥¹èÕÉ°¹Í•…É¡A…É…µÌ¹•Ð ‰­¥¹ˆ¤ñðÕ¹‘•™¥¹•°4(€€€€€€€€€€€±¥µ¥Ðè9Õµ‰•È¡ÕÉ°¹Í•…É¡A…É…µÌ¹•Ð ‰±¥µ¥Ðˆ¤ñð€ÈÀ¤°4(€€€€€€€€€ô¤ì4(€€€€€©Í½¸¡É•Ì°€ÈÀÀ°ì¥Ñ•µÌ°½¹™¥ÕÉ•è½±±•Ñ¥½¹½¹™¥ÕÉ• ¤ô¤ì4(€€€ô…Ñ €¡•ÉÉ½È¤ì4(€€€€€©Í½¸¡É•Ì°€ÔÀÌ°ì•ÉÉ½Èè•ÉÉ½È¹µ•ÍÍ…”ô¤ì4(€€€ô4(€€€É•ÑÕÉ¸ì4(€ô4(4(€¥˜€¡É•Ä¹µ•Ñ¡½€ôôô€‰A=MPˆ€˜˜ÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ½…Á¤½½±±•Ñ¥½¸½ÕÍÑ½´ˆ¤ì4(€€€¥˜€ …É•ÅÕ¥É•½±±•Ñ¥½¹‘µ¥¸¡É•Ä°É•Ì¤¤É•ÑÕÉ¸ì4(€€€ÑÉäì4(€€€€€©Í½¸¡É•Ì°€ÈÀÄ°ì¥Ñ•´è…Ý…¥ÐÉ•…Ñ•ÕÍÑ½µI•…Ñ¥½¸¡…Ý…¥ÐÉ•…‘)Í½¸¡É•Ä¤¤ô¤ì4(€€€ô…Ñ €¡•ÉÉ½È¤ì4(€€€€€©Í½¸¡É•Ì°€ÐÀÀ°ì•ÉÉ½Èè•ÉÉ½È¹µ•ÍÍ…”ô¤ì4(€€€ô4(€€€É•ÑÕÉ¸ì4(€ô4(4(€¥˜€¡É•Ä¹µ•Ñ¡½€ôôô€‰A=MPˆ€˜˜ÕÉ°¹Á…Ñ¡¹…µ”€ôôô€ˆ½…Á¤½½±±•Ñ¥½¸½¥Á¡äˆ¤ì4(€€€¥˜€ …É•ÅÕ¥É•½±±•Ñ¥½¹‘µ¥¸¡É•Ä°É•Ì¤¤É•ÑÕÉ¸ì4(€€€ÑÉäì4(€€€€€©Í½¸¡É•Ì°€ÈÀÄ°ì¥Ñ•´è…Ý…¥Ð¥µÁ½ÉÑ¥Á¡åI•…Ñ¥½¸¡…Ý…¥ÐÉ•…‘)Í½¸¡É•Ä¤¤ô¤ì4(€€€ô…Ñ €¡•ÉÉ½È¤ì4(€€€€€©Í½¸¡É•Ì°€ÐÀÀ°ì•ÉÉ½Èè•ÉÉ½È¹µ•ÍÍ…”ô¤ì4(€€€ô4(€€€É•ÑÕÉ¸ì4(€ô4(4(€½¹ÍÐ½±±•Ñ¥½¹%Ñ•µ5…Ñ €ôÕÉ°¹Á…Ñ¡¹…µ”¹µ…Ñ  ½yp½…Á¥p½½±±•Ñ¥½¹p¼¡lÀ´å„µ˜µt¬¤½¤¤ì4(€¥˜€¡½±±•Ñ¥½¹%Ñ•µ5…Ñ €˜˜É•Ä¹µ•Ñ¡½€ôôô€‰AQ ˆ¤ì4(€€€¥˜€ …É•ÅÕ¥É•½±±•Ñ¥½¹‘µ¥¸¡É•Ä°É•Ì¤¤É•ÑÕÉ¸ì4(€€€ÑÉäì4(€€€€€©Í½¸¡É•Ì°€ÈÀÀ°ì4(€€€€€€€¥Ñ•´è…Ý…¥ÐÕÁ‘…Ñ•I•…Ñ¥½¸¡½±±•Ñ¥½¹%Ñ•µ5…Ñ¡lÅt°…Ý…¥ÐÉ•…‘)Í½¸¡É•Ä¤¤°4(€€€€€ô¤ì4(€€€ô…Ñ €¡•ÉÉ½È¤ì4(€€€€€©Í½¸¡É•Ì°€ÐÀÀ°ì•ÉÉ½Èè•ÉÉ½È¹µ•ÍÍ…”ô¤ì4(€€€ô4(€€€É•ÑÕÉ¸ì4(€ô4(4(€¥˜€¡½±±•Ñ¥½¹%Ñ•µ5…Ñ €˜˜É•Ä¹µ•Ñ¡½€ôôô€‰1Qˆ¤ì4(€€€¥˜€ …É•ÅÕ¥É•½±±•Ñ¥½¹‘µ¥¸¡É•Ä°É•Ì¤¤É•ÑÕÉ¸ì4(€€€ÑÉäì4(€€€€€©Í½¸¡É•Ì°€ÈÀÀ°…Ý…¥Ð‘•±•Ñ•I•…Ñ¥½¸¡½±±•Ñ¥½¹%Ñ•µ5…Ñ¡lÅt¤¤ì4(€€€ô…Ñ €¡•ÉÉ½È¤ì4(€€€€€©Í½¸¡É•Ì°€ÐÀÀ°ì•ÉÉ½Èè•ÉÉ½È¹µ•ÍÍ…”ô¤ì4(€€€ô4(€€€É•ÑÕÉ¸ì4(€ô4(4(€½¹ÍÐµÁ5•Ñ¡½‘Ì€ô¹•ÜM•Ð¡l‰A=MPˆ°€‰Pˆ°€‰1Q‰t¤ì(€¥˜€¡É•Ä¹µ•Ñ¡½€˜˜ÕÉ°¹Á…Ñ¡¹…µ”€ôôô5A}AQ €˜˜µÁ5•Ñ¡½‘Ì¹¡…Ì¡É•Ä¹µ•Ñ¡½¤¤ì(€€€ÝÉ¥Ñ•½ÉÍ!•…‘•ÉÌ¡É•Ì¤ì(€€€¥˜€ …½…ÕÑ¡½¹™¥ÕÉ• ¤¤ì(€€€€€©Í½¸¡É•Ì°€ÔÀÌ°ì(€€€€€€€•ÉÉ½Èè€‰Í•ÉÙ•É}¹½Ñ}½¹™¥ÕÉ•ˆ°(€€€€€€€•ÉÉ½É}‘•ÍÉ¥ÁÑ¥½¸è€‰=]9I}=°=UQ!}M%9%9}MIP°AU	1%}	M}UI0°…¹Q	M}UI0µÕÍÐ‰”½¹™¥ÕÉ•¸ˆ°(€€€€€ô¤ì(€€€€€É•ÑÕÉ¸ì(€€€ô(€€€½¹ÍÐ…ÕÑ¡MÑ…Ñ”€ôÉ•Ä¹¡•…‘•ÉÌ¹…ÕÑ¡½É¥é…Ñ¥½¸€ü€‰ÁÉ•Í•¹Ðˆ€è€‰µ¥ÍÍ¥¹œˆì(€€€½¹ÍÐÉ•ÅÕ•ÍÑ1½œ€ô‰•¥¹5ÁI•ÅÕ•ÍÑ1½œ¡É•Ä°É•Ì°…ÕÑ¡MÑ…Ñ”¤ì(€€€½¹Í½±”¹¥¹™¼¡m5At€‘íÉ•Ä¹µ•Ñ¡½‘ô…ÕÑ ô‘í…ÕÑ¡MÑ…Ñ•õ€¤ì((€€€ÑÉäì(€€€€€É•Ä¹…ÕÑ €ô…Ý…¥Ð…ÕÑ¡•¹Ñ¥…Ñ•5ÁI•ÅÕ•ÍÐ¡É•Ä¤ì(€€€€€¥˜€¡½…ÕÑ¡½¹™¥ÕÉ• ¤€˜˜€…¥Í½±±•Ñ¥½¹=Ý¹•È¡É•Ä¹…ÕÑ ¤¤ì(€€€€€€€Ñ¡É½Ü¹•ÜÉÉ½È ‰Q¡¥ÌÁÉ¥Ù…Ñ”½¹¹•Ñ¥½¸É•ÅÕ¥É•Ì½Ý¹•È…ÕÑ¡½É¥é…Ñ¥½¸¸ˆ¤ì(€€€€€ô(€€€ô…Ñ €¡•ÉÉ½È¤ì(€€€€€É•ÅÕ•ÍÑ1½œ¹…ÕÑ¡I•ÍÕ±Ð€ô€‰É•ÅÕ¥É•ˆì(€€€€€É•ÅÕ•ÍÑ1½œ¹ÉÁ5•Ñ¡½€ô…Ý…¥ÐÉ•©•Ñ•‘5Á5•Ñ¡½‘½É1½œ¡É•Ä¤ì(€€€€€½¹Í½±”¹¥¹™¼¡m5At€‘íÉ•Ä¹µ•Ñ¡½‘ô…ÕÑ¡½É¥é…Ñ¥½¸µÉ•ÅÕ¥É•‘€¤ì(€€€€€É•Ì¹Í•Ñ!•…‘•È (€€€€€€€€‰]]\µÕÑ¡•¹Ñ¥…Ñ”ˆ°(€€€€€€€½…ÕÑ¡¡…±±•¹•!•…‘•È ¤°4(€€€€€€¤ì4(€€€€€©Í½¸¡É•Ì°€ÐÀÄ°ì4(€€€€€€€•ÉÉ½Èè€‰¥¹Ù…±¥‘}Ñ½­•¸ˆ°4(€€€€€€€•ÉÉ½É}‘•ÍÉ¥ÁÑ¥½¸è•ÉÉ½È¥¹ÍÑ…¹•½˜ÉÉ½È€ü•ÉÉ½È¹µ•ÍÍ…”€è€‰Q½­•¸=ÕÑ ¹¼Û…±¥‘¼¸ˆ°4(€€€€€ô¤ì4(€€€€€É•ÑÕÉ¸ì(€€€ô(€€€É•ÅÕ•ÍÑ1½œ¹…ÕÑ¡I•ÍÕ±Ð€ô½…ÕÑ¡½¹™¥ÕÉ• ¤€ü€‰…ÕÑ¡½É¥é•ˆ€è€‰¹½ÐµÉ•ÅÕ¥É•ˆì(€€€½¹Í½±”¹¥¹™¼¡m5At€‘íÉ•Ä¹µ•Ñ¡½‘ô…ÕÑ¡½É¥é•‘€¤ì(4(€€€½¹ÍÐÍ•ÉÙ•È€ôÉ•…Ñ•5…¥M•ÉÙ•È ¤ì4(€€€½¹ÍÐÑÉ…¹ÍÁ½ÉÐ€ô¹•ÜMÑÉ•…µ…‰±•!QQAM•ÉÙ•ÉQÉ…¹ÍÁ½ÉÐ¡ì4(€€€€€Í•ÍÍ¥½¹%‘•¹•É…Ñ½ÈèÕ¹‘•™¥¹•°4(€€€€€•¹…‰±•)Í½¹I•ÍÁ½¹Í”èÑÉÕ”°4(€€€ô¤ì4(4(€€€É•Ì¹½¸ ‰±½Í”ˆ°€ ¤€ôøì4(€€€€€ÑÉ…¹ÍÁ½ÉÐ¹±½Í” ¤ì4(€€€€€Í•ÉÙ•È¹±½Í” ¤ì4(€€€ô¤ì4(4(€€€ÑÉäì(€€€€€…Ý…¥ÐÍ•ÉÙ•È¹½¹¹•Ð¡ÑÉ…¹ÍÁ½ÉÐ¤ì(€€€€€½¹ÍÐ¡…¹‘±•5•ÍÍ…”€ôÑÉ…¹ÍÁ½ÉÐ¹½¹µ•ÍÍ…”ì(€€€€€ÑÉ…¹ÍÁ½ÉÐ¹½¹µ•ÍÍ…”€ô€¡µ•ÍÍ…”°•áÑÉ„¤€ôøì(€€€€€€€É•ÅÕ•ÍÑ1½œ¹ÉÁ5•Ñ¡½€ôÍ…™•5Á5•Ñ¡½‘½É1½œ¡µ•ÍÍ…”°É•Ä¹µ•Ñ¡½¤ì(€€€€€€€É•ÑÕÉ¸¡…¹‘±•5•ÍÍ…”ü¸¡µ•ÍÍ…”°•áÑÉ„¤ì(€€€€€ôì(€€€€€…Ý…¥ÐÑÉ…¹ÍÁ½ÉÐ¹¡…¹‘±•I•ÅÕ•ÍÐ¡É•Ä°É•Ì¤ì(€€€ô…Ñ €¡•ÉÉ½È¤ì(€€€€€½¹Í½±”¹•ÉÉ½È ‰m5AtÑÉ…¹ÍÁ½ÉÐµ•ÉÉ½Èˆ¤ì(€€€€€¥˜€ …É•Ì¹¡•…‘•ÉÍM•¹Ð¤ì(€€€€€€€É•Ì¹ÝÉ¥Ñ•!•… ÔÀÀ¤¹•¹ ‰%¹Ñ•É¹…°Í•ÉÙ•È•ÉÉ½Èˆ¤ì(€€€€€ô(€€€ô4(€€€É•ÑÕÉ¸ì4(€ô4(4(€É•Ì¹ÝÉ¥Ñ•!•… ÐÀÐ¤¹•¹ ‰9½Ð½Õ¹ˆ¤ì4)ô¤ì4(4)¡ÑÑÁM•ÉÙ•È¹±¥ÍÑ•¸¡A=IP°€ ¤€ôøì4(€½¹Í½±”¹±½œ¡€‘íAA}95ô±¥ÍÑ•¹¥¹œ½¸¡ÑÑÀè¼½±½…±¡½ÍÐè‘íA=IQô‘í5A}AQ!õ€¤ì4)ô¤ì4
+          ],
+          structuredContent: {
+            query,
+            kind: selectedReaction.kind,
+            mode: "direct",
+            rating,
+            selectedReaction,
+            selectedGiphy: selectedReaction,
+          },
+          _meta: {
+            reaction: selectedReaction,
+          },
+        };
+        if (nativeReactionImage) {
+          const resultWithNativeImage = {
+            ...result,
+            content: [...result.content, nativeReactionImage],
+          };
+          if (
+            Buffer.byteLength(JSON.stringify(resultWithNativeImage), "utf8") <
+            MAX_REACTION_RESULT_BYTES
+          ) {
+            return resultWithNativeImage;
+          }
+          console.warn(
+            "Native reaction image omitted to keep the MCP result below 20 KB.",
+          );
+        }
+        return result;
+      } catch (error) {
+        return {
+          isError: true,
+          content: [
+            {
+              type: "text",
+              text:
+                error instanceof Error
+                  ? error.message
+                  : "GIPHY no pudo preparar la reacciÃ³n.",
+            },
+          ],
+        };
+      }
+    },
+  );
+
+  registerAppTool(
+    server,
+    "open_giphy_picker",
+    {
+      title: "Let the user choose manually",
+      description:
+        "Manual picker only. Use this exclusively when the user explicitly asks to see a visible selector and choose a reaction. For ordinary requests to send or choose a reaction, call show_giphy_reaction directly.",
+      inputSchema: {
+        query: z.string().trim().min(1).max(50).default("abrazo tierno"),
+        kind: kindSchema.default("sticker"),
+        rating: ratingSchema.default("pg"),
+      },
+      outputSchema: pickerOutputSchema,
+      annotations: {
+        readOnlyHint: true,
+        destructiveHint: false,
+        openWorldHint: true,
+        idempotentHint: true,
+      },
+      _meta: {
+        securitySchemes: connectorSecurity,
+        ui: { resourceUri: TEMPLATE_URI },
+        "openai/outputTemplate": TEMPLATE_URI,
+        "openai/toolInvocation/invoking": "Opening reactionsâ€¦",
+        "openai/toolInvocation/invoked": "Picker ready",
+      },
+    },
+    async ({ query = "abrazo tierno", kind = "sticker", rating = "pg" }) =>
+      widgetResult({
+        query,
+        kind,
+        rating,
+        message: `Opening ${kind} choices for â€œ${query}â€.`,
+      }),
+  );
+
+  registerAppTool(
+    server,
+    "list_magic_collection",
+    {
+      title: "List the private collection",
+      description:
+        "Use this when the user wants to review saved GIFs and stickers, including their IDs and usage metadata.",
+      inputSchema: {
+        kind: kindSchema.optional(),
+        limit: z.number().int().min(1).max(20).default(20),
+      },
+      outputSchema: { collection: pickerOutputSchema.collection },
+      annotations: {
+        readOnlyHint: true,
+        destructiveHint: false,
+        openWorldHint: false,
+        idempotentHint: true,
+      },
+      _meta: { securitySchemes: connectorSecurity },
+    },
+    async ({ kind, limit = 20 }) => {
+      const collection = await searchCollection({ query: "", kind, limit }).catch(
+        () => [],
+      );
+      return {
+        content: [
+          {
+            type: "text",
+            text: `The private collection has ${collection.length} visible reactions.`,
+          },
+        ],
+        structuredContent: { collection },
+      };
+    },
+  );
+
+  registerAppTool(
+    server,
+    "search_magic_collection",
+    {
+      title: "Search the private collection",
+      description:
+        "Use this only when the user explicitly asks to search or review saved reactions. It returns up to three distinct matches. Never call it as a required step before show_giphy_reaction.",
+      inputSchema: {
+        query: z.string().trim().max(50).default(""),
+        kind: kindSchema.optional(),
+      },
+      outputSchema: { collection: pickerOutputSchema.collection },
+      annotations: {
+        readOnlyHint: true,
+        destructiveHint: false,
+        openWorldHint: false,
+        idempotentHint: true,
+      },
+      _meta: {
+        securitySchemes: connectorSecurity,
+        ui: { visibility: ["app", "model"] },
+        "openai/widgetAccessible": true,
+      },
+    },
+    async ({ query = "", kind }) => {
+      const ranked = await searchCollection({ query, kind, limit: 20 }).catch(
+        () => [],
+      );
+      const collection = ranked
+        .filter(
+          (item, index, items) =>
+            index === items.findIndex((candidate) => candidate.id === item.id),
+        )
+        .slice(0, 3);
+      return {
+        content: [
+          {
+            type: "text",
+            text: `I found ${collection.length} distinct reactions in the private collection.`,
+          },
+        ],
+        structuredContent: { collection },
+      };
+    },
+  );
+
+  registerAppTool(
+    server,
+    "add_magic_reaction",
+    {
+      title: "Save an image to the private collection",
+      description:
+        "Use this only when the user explicitly asks to save an image from the conversation as a sticker or GIF. Pass the exact conversation image through the authorized image parameter; never substitute a pasted URL.",
+      inputSchema: {
+        image: chatGptImageSchema.optional().describe(
+          "The exact image file from the conversation that the user wants to save.",
+        ),
+        title: z.string().trim().min(1).max(100),
+        description: z.string().trim().max(500).default(""),
+        kind: kindSchema.default("sticker"),
+        tags: z.array(z.string().trim().min(1).max(50)).max(20).default([]),
+        moods: z.array(z.string().trim().min(1).max(50)).max(8).default([]),
+        useWhen: z.array(z.string().trim().min(1).max(140)).max(12).default([]),
+        favorite: z.boolean().default(false),
+        priority: z.number().int().min(0).max(100).default(0),
+      },
+      outputSchema: {
+        item: z.object({
+          id: z.string().uuid(),
+          title: z.string(),
+          kind: kindSchema,
+          source: z.literal("custom"),
+        }),
+      },
+      annotations: {
+        readOnlyHint: false,
+        destructiveHint: false,
+        openWorldHint: true,
+        idempotentHint: false,
+      },
+      _meta: {
+        securitySchemes: ownerSecurity,
+        "openai/fileParams": ["image"],
+        "openai/toolInvocation/invoking": "Guardando la nueva pegatinaâ€¦",
+        "openai/toolInvocation/invoked": "Reaction saved",
+      },
+    },
+    async ({ image, ...details }, extra) => {
+      if (!isCollectionOwner(extra.authInfo)) return oauthChallengeResult();
+      if (!image) {
+        return {
+          isError: true,
+          content: [
+            {
+              type: "text",
+              text: "Necesito la imagen autorizada de la conversaciÃ³n para guardarla.",
+            },
+          ],
+        };
+      }
+      let uploadStage = "download";
+      try {
+        const { bytes, mimeType } = await downloadChatGptImage(image);
+        uploadStage = "save";
+        const item = await createCustomReaction({
+          ...details,
+          mimeType,
+          base64: bytes.toString("base64"),
+        });
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Saved â€œ${item.title}â€ to the private collection.`,
+            },
+          ],
+          structuredContent: {
+            item: {
+              id: item.id,
+              title: item.title,
+              kind: item.kind,
+              source: item.source,
+            },
+          },
+        };
+      } catch (error) {
+        console.error("Magic reaction upload failed", {
+          stage: uploadStage,
+          message: error instanceof Error ? error.message : String(error),
+        });
+        return {
+          isError: true,
+          content: [
+            {
+              type: "text",
+              text:
+                error instanceof Error
+                  ? error.message
+                  : "The image could not be saved to the private collection.",
+            },
+          ],
+        };
+      }
+    },
+  );
+
+  registerAppTool(
+    server,
+    "update_magic_reaction",
+    {
+      title: "Edit a saved reaction",
+      description:
+        "Use this only when the user asks to edit a saved GIF or sticker. It can change its title, description, tags, moods, usage guidance, favorite status, and priority. It never replaces or deletes the image.",
+      inputSchema: {
+        id: z.string().uuid(),
+        title: z.string().trim().min(1).max(100).optional(),
+        description: z.string().trim().max(500).optional(),
+        tags: z.array(z.string().trim().min(1).max(50)).max(20).optional(),
+        moods: z.array(z.string().trim().min(1).max(50)).max(8).optional(),
+        useWhen: z.array(z.string().trim().min(1).max(140)).max(12).optional(),
+        favorite: z.boolean().optional(),
+        priority: z.number().int().min(0).max(100).optional(),
+      },
+      annotations: {
+        readOnlyHint: false,
+        destructiveHint: false,
+        openWorldHint: false,
+        idempotentHint: true,
+      },
+      _meta: {
+        securitySchemes: ownerSecurity,
+        "openai/toolInvocation/invoking": "Cuidando el tesoritoâ€¦",
+        "openai/toolInvocation/invoked": "Tesorito actualizado âœ¨",
+      },
+    },
+    async ({ id, ...changes }, extra) => {
+      if (!isCollectionOwner(extra.authInfo)) return oauthChallengeResult();
+      if (!Object.keys(changes).length) {
+        return {
+          isError: true,
+          content: [{ type: "text", text: "Dime al menos quÃ© detalle quieres cambiar." }],
+        };
+      }
+      try {
+        const item = await updateReaction(id, changes);
+        return {
+          content: [{ type: "text", text: `Updated â€œ${item.title}â€ in the private collection.` }],
+          structuredContent: { item },
+        };
+      } catch (error) {
+        return {
+          isError: true,
+          content: [{ type: "text", text: error instanceof Error ? error.message : "No pude actualizar la reacciÃ³n." }],
+        };
+      }
+    },
+  );
+
+  registerAppTool(
+    server,
+    "deactivate_magic_reaction",
+    {
+      title: "Hide a saved reaction",
+      description:
+        "Use this only when the user explicitly asks to stop using a saved GIF or sticker. It hides the item reversibly and does not delete its record or image.",
+      inputSchema: { id: z.string().uuid() },
+      annotations: {
+        readOnlyHint: false,
+        destructiveHint: false,
+        openWorldHint: false,
+        idempotentHint: true,
+      },
+      _meta: {
+        securitySchemes: ownerSecurity,
+        "openai/toolInvocation/invoking": "Guardando el tesoritoâ€¦",
+        "openai/toolInvocation/invoked": "Tesorito guardado con cuidado",
+      },
+    },
+    async ({ id }, extra) => {
+      if (!isCollectionOwner(extra.authInfo)) return oauthChallengeResult();
+      try {
+        const item = await updateReaction(id, { active: false });
+        return {
+          content: [{ type: "text", text: `He dejado â€œ${item.title}â€ fuera de las bÃºsquedas, sin borrarlo.` }],
+          structuredContent: { item },
+        };
+      } catch (error) {
+        return {
+          isError: true,
+          content: [{ type: "text", text: error instanceof Error ? error.message : "No pude desactivar la reacciÃ³n." }],
+        };
+      }
+    },
+  );
+}
+
+function createMagicServer() {
+  const widgetDomain = new URL(publicBaseUrl()).origin;
+  const collectionResourceDomains = collectionAssetOrigins();
+  const reactionConnectDomains = [widgetDiagnosticOrigin()];
+  const widgetConnectDomains = [
+    "https://api.giphy.com",
+    "https://giphy-analytics.giphy.com",
+  ];
+  const widgetResourceDomains = [
+    "https://media.giphy.com",
+    "https://media0.giphy.com",
+    "https://media1.giphy.com",
+    "https://media2.giphy.com",
+    "https://media3.giphy.com",
+    "https://media4.giphy.com",
+    "https://i.giphy.com",
+    ...collectionResourceDomains,
+  ];
+  const server = new McpServer(
+    { name: "magic-reactions", version: APP_VERSION },
+    {
+      instructions:
+        "PRIVATE CONNECTION: OAuth protects the complete MCP. Use show_giphy_reaction directly whenever the user asks you to send, choose, or surprise them with a GIF or sticker. That one call searches the private collection first and falls back to GIPHY. Never require an exact ID or a separate search step. Only open the picker when the user explicitly asks to browse and choose manually. Save, edit, and hide reactions only on explicit request.",
+    },
+  );
+
+  function registerWidgetResource(name, uri) {
+    registerAppResource(server, name, uri, {}, async () => ({
+      contents: [
+        {
+          uri,
+          mimeType: RESOURCE_MIME_TYPE,
+          text: renderWidgetHtml(),
+          _meta: {
+            ui: {
+              domain: widgetDomain,
+              prefersBorder: true,
+              csp: {
+                connectDomains: widgetConnectDomains,
+                resourceDomains: widgetResourceDomains,
+              },
+            },
+            "openai/widgetCSP": {
+              connect_domains: widgetConnectDomains,
+              resource_domains: widgetResourceDomains,
+            },
+            "openai/widgetDomain": widgetDomain,
+            "openai/widgetDescription":
+              "A warm lilac picker for searching, previewing, and choosing GIPHY stickers and GIFs.",
+            "openai/widgetPrefersBorder": true,
+          },
+        },
+      ],
+    }));
+  }
+
+  registerWidgetResource("magic-reactions-picker-v1", TEMPLATE_URI);
+  LEGACY_TEMPLATE_URIS.forEach((uri, index) => {
+    registerWidgetResource(`magic-reactions-picker-legacy-v${index + 1}`, uri);
+  });
+  function registerReactionResource(name, uri) {
+    registerAppResource(server, name, uri, {}, async () => ({
+      contents: [
+        {
+          uri,
+          mimeType: RESOURCE_MIME_TYPE,
+          text: renderReactionHtml(),
+          _meta: {
+            ui: {
+              domain: widgetDomain,
+              prefersBorder: false,
+              csp: {
+                connectDomains: reactionConnectDomains,
+                resourceDomains: widgetResourceDomains,
+              },
+            },
+            "openai/widgetCSP": {
+              connect_domains: reactionConnectDomains,
+              resource_domains: widgetResourceDomains,
+            },
+            "openai/widgetDomain": widgetDomain,
+            "openai/widgetDescription":
+              "A single animated reaction selected from a private collection or GIPHY.",
+            "openai/widgetPrefersBorder": false,
+          },
+        },
+      ],
+    }));
+  }
+
+  registerReactionResource(
+    "magic-reactions-direct-v1",
+    REACTION_TEMPLATE_URI,
+  );
+  registerReactionResource(
+    "magic-reactions-direct-legacy-v1",
+    LEGACY_REACTION_V1_URI,
+  );
+  LEGACY_REACTION_TEMPLATE_URIS.forEach((uri, index) => {
+    registerReactionResource(`magic-reactions-direct-legacy-v${index + 2}`, uri);
+  });
+
+  registerMagicTools(server);
+  exposeStandardSecuritySchemes(server);
+  return server;
+}
+
+function exposeStandardSecuritySchemes(server) {
+  const protocol = server.server;
+  const originalListTools = protocol?._requestHandlers?.get("tools/list");
+  if (typeof originalListTools !== "function") {
+    throw new Error("No pude ampliar el descriptor de las herramientas MCP.");
+  }
+
+  // SDK 1.30 preserves the compatibility mirror in `_meta` but omits the
+  // standard top-level field required by ChatGPT's OAuth tool discovery.
+  protocol.setRequestHandler(ListToolsRequestSchema, async (request, extra) => {
+    const result = await originalListTools(request, extra);
+    return {
+      ...result,
+      tools: result.tools.map((tool) => {
+        const securitySchemes = tool?._meta?.securitySchemes;
+        return Array.isArray(securitySchemes)
+          ? { ...tool, securitySchemes }
+          : tool;
+      }),
+    };
+  });
+}
+
+function writeCorsHeaders(res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "authorization, content-type, mcp-session-id, mcp-protocol-version",
+  );
+  res.setHeader(
+    "Access-Control-Expose-Headers",
+    "Mcp-Session-Id, MCP-Protocol-Version",
+  );
+}
+
+function json(res, status, value) {
+  res
+    .writeHead(status, {
+      "content-type": "application/json; charset=utf-8",
+      "cache-control": "no-store",
+    })
+    .end(JSON.stringify(value));
+}
+
+async function readJson(req, maxBytes = 12 * 1024 * 1024) {
+  const chunks = [];
+  let size = 0;
+  for await (const chunk of req) {
+    size += chunk.byteLength;
+    if (size > maxBytes) throw new Error("La peticiÃ³n es demasiado grande.");
+    chunks.push(chunk);
+  }
+  if (!chunks.length) return {};
+  try {
+    return JSON.parse(Buffer.concat(chunks).toString("utf8"));
+  } catch {
+    throw new Error("El contenido enviado no es JSON vÃ¡lido.");
+  }
+}
+
+function writeWidgetDiagnosticHeaders(res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Cache-Control", "no-store");
+  res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
+}
+
+function widgetDiagnosticHasBody(req) {
+  const contentLength = String(req.headers["content-length"] || "0");
+  if (contentLength !== "0") {
+    req.resume();
+    return Promise.resolve(true);
+  }
+  if (!req.headers["transfer-encoding"]) return Promise.resolve(false);
+
+  return new Promise((resolve) => {
+    let settled = false;
+    let timeout;
+    const finish = (hasBody) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timeout);
+      req.removeListener("data", onData);
+      req.removeListener("end", onEnd);
+      req.removeListener("error", onError);
+      resolve(hasBody);
+    };
+    const onData = (chunk) => {
+      if (!chunk.byteLength) return;
+      finish(true);
+      req.resume();
+    };
+    const onEnd = () => finish(false);
+    const onError = () => finish(true);
+    req.on("data", onData);
+    req.on("end", onEnd);
+    req.on("error", onError);
+    timeout = setTimeout(() => {
+      finish(true);
+      req.resume();
+    }, 100);
+  });
+}
+
+let widgetDiagnosticWindowStartedAt = 0;
+let widgetDiagnosticLogCount = 0;
+
+function logWidgetDiagnostic(stage) {
+  const now = Date.now();
+  if (now - widgetDiagnosticWindowStartedAt >= 60_000) {
+    widgetDiagnosticWindowStartedAt = now;
+    widgetDiagnosticLogCount = 0;
+  }
+  if (widgetDiagnosticLogCount >= WIDGET_DIAGNOSTIC_LOG_LIMIT) return;
+  widgetDiagnosticLogCount += 1;
+  console.info(`[WIDGET] v=1 stage=${stage}`);
+}
+
+function safeMcpMethodForLog(message, httpMethod) {
+  if (httpMethod === "GET") return "http-get";
+  if (httpMethod === "DELETE") return "http-delete";
+  if (httpMethod !== "POST") return "other";
+  if (Array.isArray(message)) return "batch";
+
+  const method = typeof message?.method === "string" ? message.method : "";
+  if (!method) return "unknown";
+  return DIAGNOSTIC_MCP_METHODS.has(method) ? method : "other";
+}
+
+function beginMcpRequestLog(req, res, authState) {
+  const startedAt = Date.now();
+  const state = {
+    rpcMethod: safeMcpMethodForLog(undefined, req.method),
+    authResult: "checking",
+  };
+  let emitted = false;
+
+  const emit = (status, outcome) => {
+    if (emitted) return;
+    emitted = true;
+    console.info(
+      `[MCP] request rpc=${state.rpcMethod} http=${req.method || "UNKNOWN"} ` +
+        `auth=${authState} authResult=${state.authResult} status=${status} ` +
+        `outcome=${outcome} durationMs=${Date.now() - startedAt}`,
+    );
+  };
+
+  res.once("finish", () => emit(res.statusCode, "finished"));
+  res.once("close", () => {
+    if (!res.writableFinished) emit("interrupted", "interrupted");
+  });
+
+  return state;
+}
+
+function rejectedMcpMethodForLog(req) {
+  if (req.method !== "POST") {
+    return Promise.resolve(safeMcpMethodForLog(undefined, req.method));
+  }
+
+  return new Promise((resolve) => {
+    const chunks = [];
+    let size = 0;
+    let settled = false;
+    let timer;
+
+    const cleanup = () => {
+      if (timer) clearTimeout(timer);
+      req.removeListener("data", onData);
+      req.removeListener("end", onEnd);
+      req.removeListener("error", onError);
+      req.removeListener("aborted", onAborted);
+    };
+
+    const finish = (rpcMethod, drain = false) => {
+      if (settled) return;
+      settled = true;
+      cleanup();
+      if (drain && !req.destroyed) req.resume();
+      resolve(rpcMethod);
+    };
+
+    const onData = (chunk) => {
+      size += chunk.byteLength;
+      if (size > MAX_REJECTED_MCP_LOG_BODY_BYTES) {
+        finish("unknown", true);
+        return;
+      }
+      chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+    };
+
+    const onEnd = () => {
+      try {
+        const body = chunks.length
+          ? JSON.parse(Buffer.concat(chunks).toString("utf8"))
+          : {};
+        finish(safeMcpMethodForLog(body, req.method));
+      } catch {
+        finish("unknown");
+      }
+    };
+
+    const onError = () => finish("unknown");
+    const onAborted = () => finish("unknown");
+
+    timer = setTimeout(
+      () => finish("unknown", true),
+      MAX_REJECTED_MCP_LOG_WAIT_MS,
+    );
+    timer.unref?.();
+    req.on("data", onData);
+    req.once("end", onEnd);
+    req.once("error", onError);
+    req.once("aborted", onAborted);
+  });
+}
+
+function requireCollectionAdmin(req, res) {
+  if (isCollectionAdmin(req)) return true;
+  json(res, 401, { error: "The owner code is not correct." });
+  return false;
+}
+
+function giphyIdFrom(value) {
+  const raw = String(value || "").trim();
+  if (/^[a-zA-Z0-9_-]{3,100}$/.test(raw)) return raw;
+  try {
+    const url = new URL(raw);
+    const last = url.pathname.split("-").at(-1)?.split("/").filter(Boolean).at(-1);
+    return /^[a-zA-Z0-9_-]{3,100}$/.test(last || "") ? last : "";
+  } catch {
+    return "";
+  }
+}
+
+async function importGiphyReaction(input) {
+  const kind = input.kind === "sticker" ? "sticker" : "gif";
+  const id = giphyIdFrom(input.giphyId || input.url);
+  if (!id) throw new Error("No pude reconocer el ID o enlace de GIPHY.");
+  const payload = await getGiphyById({ id, kind });
+  const item = payload?.data;
+  const imageUrl = giphyImageUrl(item);
+  if (!item?.id || !imageUrl) throw new Error("GIPHY no devolviÃ³ esa reacciÃ³n.");
+  return createGiphyReaction({
+    ...input,
+    kind,
+    giphyId: item.id,
+    title: input.title || item.title || `${kind} de GIPHY`,
+    imageUrl,
+    previewUrl: giphyPreviewUrl(item) || imageUrl,
+    pageUrl: item.url || `https://giphy.com/gifs/${item.id}`,
+  });
+}
+
+const httpServer = createServer(async (req, res) => {
+  if (!req.url) {
+    res.writeHead(400).end("Missing URL");
+    return;
+  }
+
+  const url = new URL(req.url, `http://${req.headers.host ?? "localhost"}`);
+
+  if (await handleOAuthRequest(req, res, url)) return;
+
+  if (req.method === "OPTIONS" && url.pathname === MCP_PATH) {
+    writeCorsHeaders(res);
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET, DELETE, OPTIONS");
+    res.writeHead(204).end();
+    return;
+  }
+
+  if (
+    req.method === "OPTIONS" &&
+    url.pathname === WIDGET_DIAGNOSTIC_PATH
+  ) {
+    writeWidgetDiagnosticHeaders(res);
+    res.writeHead(204).end();
+    return;
+  }
+
+  if (
+    req.method === "POST" &&
+    url.pathname === WIDGET_DIAGNOSTIC_PATH
+  ) {
+    writeWidgetDiagnosticHeaders(res);
+    const query = [...url.searchParams.entries()];
+    const stage = query.length === 1 && query[0][0] === "stage"
+      ? query[0][1]
+      : "";
+    if (await widgetDiagnosticHasBody(req)) {
+      res.writeHead(413).end();
+      return;
+    }
+    if (!WIDGET_DIAGNOSTIC_STAGES.has(stage)) {
+      res.writeHead(400).end();
+      return;
+    }
+    logWidgetDiagnostic(stage);
+    res.writeHead(204).end();
+    return;
+  }
+
+  if (
+    req.method === "GET" &&
+    (url.pathname === "/" || url.pathname === "/health")
+  ) {
+    const body = JSON.stringify({
+      name: APP_NAME,
+      version: APP_VERSION,
+      status: "ok",
+      giphyConfigured: Boolean(process.env.GIPHY_API_KEY?.trim()),
+      collectionConfigured: collectionConfigured(),
+      collectionAdminConfigured: collectionAdminConfigured(),
+      oauthConfigured: oauthConfigured(),
+      mcp: MCP_PATH,
+    });
+    res
+      .writeHead(200, { "content-type": "application/json; charset=utf-8" })
+      .end(body);
+    return;
+  }
+
+  if (req.method === "GET" && url.pathname === "/preview") {
+    res
+      .writeHead(200, { "content-type": "text/html; charset=utf-8" })
+      .end(renderWidgetHtml());
+    return;
+  }
+
+  if (req.method === "GET" && url.pathname === "/preview/reaction") {
+    res
+      .writeHead(200, { "content-type": "text/html; charset=utf-8" })
+      .end(renderReactionHtml());
+    return;
+  }
+
+  if (req.method === "GET" && url.pathname.startsWith("/api/dev-assets/")) {
+    if (storageDriver() !== "memory") {
+      res.writeHead(404).end("Not Found");
+      return;
+    }
+    const key = decodeURIComponent(url.pathname.slice("/api/dev-assets/".length));
+    const object = memoryObject(key);
+    if (!object) {
+      res.writeHead(404).end("Not Found");
+      return;
+    }
+    res
+      .writeHead(200, {
+        "content-type": object.contentType,
+        "cache-control": "private, max-age=60",
+      })
+      .end(object.bytes);
+    return;
+  }
+
+  if (req.method === "GET" && url.pathname === "/coleccion") {
+    res
+      .writeHead(200, {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store",
+        "content-security-policy":
+          "default-src 'self'; img-src 'self' data: blob: https:; " +
+          "style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; " +
+          "connect-src 'self'; base-uri 'none'; frame-ancestors 'none'",
+      })
+      .end(collectionAdminTemplate);
+    return;
+  }
+
+  if (
+    req.method === "GET" &&
+    (url.pathname === "/.well-known/oauth-protected-resource" ||
+      url.pathname === "/.well-known/oauth-protected-resource/mcp")
+  ) {
+    json(res, 200, protectedResourceMetadata());
+    return;
+  }
+
+  if (req.method === "GET" && url.pathname === "/api/collection") {
+    if (!requireCollectionAdmin(req, res)) return;
+    try {
+      const items = url.searchParams.get("all") === "1"
+        ? await listCollection({ activeOnly: false })
+        : await searchCollection({
+            query: url.searchParams.get("query") || "",
+            kind: url.searchParams.get("kind") || undefined,
+            limit: Number(url.searchParams.get("limit") || 20),
+          });
+      json(res, 200, { items, configured: collectionConfigured() });
+    } catch (error) {
+      json(res, 503, { error: error.message });
+    }
+    return;
+  }
+
+  if (req.method === "POST" && url.pathname === "/api/collection/custom") {
+    if (!requireCollectionAdmin(req, res)) return;
+    try {
+      json(res, 201, { item: await createCustomReaction(await readJson(req)) });
+    } catch (error) {
+      json(res, 400, { error: error.message });
+    }
+    return;
+  }
+
+  if (req.method === "POST" && url.pathname === "/api/collection/giphy") {
+    if (!requireCollectionAdmin(req, res)) return;
+    try {
+      json(res, 201, { item: await importGiphyReaction(await readJson(req)) });
+    } catch (error) {
+      json(res, 400, { error: error.message });
+    }
+    return;
+  }
+
+  const collectionItemMatch = url.pathname.match(/^\/api\/collection\/([0-9a-f-]+)$/i);
+  if (collectionItemMatch && req.method === "PATCH") {
+    if (!requireCollectionAdmin(req, res)) return;
+    try {
+      json(res, 200, {
+        item: await updateReaction(collectionItemMatch[1], await readJson(req)),
+      });
+    } catch (error) {
+      json(res, 400, { error: error.message });
+    }
+    return;
+  }
+
+  if (collectionItemMatch && req.method === "DELETE") {
+    if (!requireCollectionAdmin(req, res)) return;
+    try {
+      json(res, 200, await deleteReaction(collectionItemMatch[1]));
+    } catch (error) {
+      json(res, 400, { error: error.message });
+    }
+    return;
+  }
+
+  const mcpMethods = new Set(["POST", "GET", "DELETE"]);
+  if (req.method && url.pathname === MCP_PATH && mcpMethods.has(req.method)) {
+    writeCorsHeaders(res);
+    if (!oauthConfigured()) {
+      json(res, 503, {
+        error: "server_not_configured",
+        error_description: "OWNER_CODE, OAUTH_SIGNING_SECRET, PUBLIC_BASE_URL, and DATABASE_URL must be configured.",
+      });
+      return;
+    }
+    const authState = req.headers.authorization ? "present" : "missing";
+    const requestLog = beginMcpRequestLog(req, res, authState);
+    console.info(`[MCP] ${req.method} auth=${authState}`);
+
+    try {
+      req.auth = await authenticateMcpRequest(req);
+      if (oauthConfigured() && !isCollectionOwner(req.auth)) {
+        throw new Error("This private connection requires owner authorization.");
+      }
+    } catch (error) {
+      requestLog.authResult = "required";
+      requestLog.rpcMethod = await rejectedMcpMethodForLog(req);
+      console.info(`[MCP] ${req.method} authorization-required`);
+      res.setHeader(
+        "WWW-Authenticate",
+        oauthChallengeHeader(),
+      );
+      json(res, 401, {
+        error: "invalid_token",
+        error_description: error instanceof Error ? error.message : "Token OAuth no vÃ¡lido.",
+      });
+      return;
+    }
+    requestLog.authResult = oauthConfigured() ? "authorized" : "not-required";
+    console.info(`[MCP] ${req.method} authorized`);
+
+    const server = createMagicServer();
+    const transport = new StreamableHTTPServerTransport({
+      sessionIdGenerator: undefined,
+      enableJsonResponse: true,
+    });
+
+    res.on("close", () => {
+      transport.close();
+      server.close();
+    });
+
+    try {
+      await server.connect(transport);
+      const handleMessage = transport.onmessage;
+      transport.onmessage = (message, extra) => {
+        requestLog.rpcMethod = safeMcpMethodForLog(message, req.method);
+        return handleMessage?.(message, extra);
+      };
+      await transport.handleRequest(req, res);
+    } catch (error) {
+      console.error("[MCP] transport-error");
+      if (!res.headersSent) {
+        res.writeHead(500).end("Internal server error");
+      }
+    }
+    return;
+  }
+
+  res.writeHead(404).end("Not Found");
+});
+
+httpServer.listen(PORT, () => {
+  console.log(`${APP_NAME} listening on http://localhost:${PORT}${MCP_PATH}`);
+});
