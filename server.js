@@ -1269,6 +1269,14 @@ const httpServer = createServer(async (req, res) => {
       collectionConfigured: collectionConfigured(),
       collectionAdminConfigured: collectionAdminConfigured(),
       oauthConfigured: oauthConfigured(),
+      storageSignals: {
+        driver: Boolean(process.env.STORAGE_DRIVER?.trim()),
+        bucket: Boolean(process.env.BUCKET?.trim()),
+        region: Boolean(process.env.REGION?.trim()),
+        endpoint: Boolean(process.env.ENDPOINT?.trim()),
+        accessKeyId: Boolean(process.env.ACCESS_KEY_ID?.trim()),
+        secretAccessKey: Boolean(process.env.SECRET_ACCESS_KEY?.trim()),
+      },
       mcp: MCP_PATH,
     });
     res
