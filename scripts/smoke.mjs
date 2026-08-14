@@ -113,7 +113,7 @@ try {
   const health = await waitForHealth();
   if (
     health.name !== "Magic Reactions" ||
-    health.version !== "0.1.0" ||
+    health.version !== "0.1.1" ||
     !health.oauthConfigured ||
     !health.collectionConfigured
   ) {
@@ -138,7 +138,7 @@ try {
     headers: { "content-type": "application/json" },
     body: JSON.stringify({
       client_name: "Smoke client",
-      redirect_uris: ["http://127.0.0.1/callback"],
+      redirect_uris: ["https://chatgpt.com/connector/oauth/smoke-callback"],
     }),
   }).then((response) => response.json());
   if (!registration.client_id) throw new Error("Dynamic client registration failed.");
@@ -149,33 +149,58 @@ try {
   authorize.search = new URLSearchParams({
     response_type: "code",
     client_id: registration.client_id,
-    redirect_uri: "http://127.0.0.1/callback",
+    redirect_uri: "https://chatgpt.com/connector/oauth/smoke-callback",
     scope: "reactions:manage",
     state: "smoke-state",
     code_challenge: challenge,
     code_challenge_method: "S256",
   });
   const consent = await fetch(authorize);
+  const consentCsp = consent.headers.get("content-security-policy") || "";
   if (!consent.ok || !(await consent.text()).includes("Owner code")) {
     throw new Error("OAuth consent page did not render.");
+  }
+  if (
+    !consentCsp.includes("form-action 'self' https://chatgpt.com") ||
+    consent.headers.get("referrer-policy") !== "no-referrer"
+  ) {
+    throw new Error(`OAuth consent page does not allow the registered ChatGPT callback safely: ${consentCsp}`);
+  }
+  const rejectedAuthorization = await postForm("/oauth/authorize", {
+    response_type: "code",
+    client_id: registration.client_id,
+    redirect_uri: "https://chatgpt.com/connector/oauth/smoke-callback",
+    scope: "reactions:manage",
+    state: "smoke-state",
+    code_challenge: challenge,
+    code_challenge_method: "S256",
+    owner_code: "incorrect-owner-code",
+  });
+  if (
+    rejectedAuthorization.status !== 401 ||
+    !rejectedAuthorization.headers
+      .get("content-security-policy")
+      ?.includes("form-action 'self' https://chatgpt.com")
+  ) {
+    throw new Error("Rejected OAuth consent did not preserve its callback security policy.");
   }
   const authorization = await postForm("/oauth/authorize", {
     response_type: "code",
     client_id: registration.client_id,
-    redirect_uri: "http://127.0.0.1/callback",
+    redirect_uri: "https://chatgpt.com/connector/oauth/smoke-callback",
     scope: "reactions:manage",
     state: "smoke-state",
     code_challenge: challenge,
     code_challenge_method: "S256",
     owner_code: "owner-code-for-local-smoke",
   });
-  if (authorization.status !== 302) throw new Error("Owner authorization failed.");
+  if (authorization.status !== 303) throw new Error("Owner authorization failed.");
   const callback = new URL(authorization.headers.get("location"));
   if (callback.searchParams.get("state") !== "smoke-state") throw new Error("OAuth state was not preserved.");
   const tokens = await postForm("/oauth/token", {
     grant_type: "authorization_code",
     client_id: registration.client_id,
-    redirect_uri: "http://127.0.0.1/callback",
+    redirect_uri: "https://chatgpt.com/connector/oauth/smoke-callback",
     code: callback.searchParams.get("code"),
     code_verifier: verifier,
   }).then((response) => response.json());
@@ -296,7 +321,10 @@ try {
   }
   console.log("OAuth, empty GIPHY fallback, mobile native image, upload, edit, hide, refresh rotation, and widget resource are valid.");
 } finally {
+  const childExit = child.exitCode === null ? once(child, "exit") : Promise.resolve();
+  const upstreamClosed = upstream.listening
+    ? new Promise((resolve) => upstream.close(resolve))
+    : Promise.resolve();
   child.kill();
-  upstream.close();
-  await Promise.allSettled([once(child, "exit"), once(upstream, "close")]);
+  await Promise.allSettled([childExit, upstreamClosed]);
 }
