@@ -112,8 +112,10 @@ in your shell, and run `npm.cmd run dev`.
 - OAuth uses dynamic client registration, authorization code flow, PKCE S256,
   short-lived access tokens, expiring single-use codes, and rotating hashed
   refresh tokens.
-- Redirect URIs must match the registered URI exactly; HTTPS is required except
-  for loopback development callbacks.
+- Dynamic registration accepts only ChatGPT's current or legacy callback URI;
+  loopback HTTP(S) callbacks remain available for local development.
+- OAuth POST bodies are capped at 64 KiB and oversized requests fail cleanly
+  without stopping the service.
 - The owner code is compared in constant time and authorization attempts are
   rate-limited per process.
 - Never put `OWNER_CODE`, `OAUTH_SIGNING_SECRET`, database credentials, or Bucket

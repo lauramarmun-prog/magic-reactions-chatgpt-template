@@ -39,7 +39,7 @@ import {
 import { memoryObject, storageDriver } from "./lib/object-store.js";
 
 const APP_NAME = "Magic Reactions";
-const APP_VERSION = "0.1.1";
+const APP_VERSION = "0.1.2";
 const MCP_PATH = "/mcp";
 const WIDGET_DIAGNOSTIC_PATH = "/api/widget-diagnostic";
 const WIDGET_DIAGNOSTIC_PLACEHOLDER =

@@ -113,7 +113,7 @@ try {
   const health = await waitForHealth();
   if (
     health.name !== "Magic Reactions" ||
-    health.version !== "0.1.1" ||
+    health.version !== "0.1.2" ||
     !health.oauthConfigured ||
     !health.collectionConfigured
   ) {
@@ -131,6 +131,91 @@ try {
   const anonymousCollection = await fetch(`${appOrigin}/api/collection`);
   if (anonymousCollection.status !== 401) {
     throw new Error("The private collection API must reject anonymous reads.");
+  }
+
+  for (const path of ["/oauth/authorize", "/oauth/token"]) {
+    const oversized = await fetch(`${appOrigin}${path}`, {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body: `grant_type=${"x".repeat(70 * 1024)}`,
+    });
+    const oversizedBody = await oversized.json();
+    if (
+      oversized.status !== 413 ||
+      oversizedBody.error !== "invalid_request"
+    ) {
+      throw new Error(`${path} did not reject an oversized body safely.`);
+    }
+  }
+  const oversizedRegistration = await fetch(`${appOrigin}/oauth/register`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ padding: "x".repeat(70 * 1024) }),
+  });
+  if (
+    oversizedRegistration.status !== 413 ||
+    (await oversizedRegistration.json()).error !== "invalid_request"
+  ) {
+    throw new Error("Dynamic registration did not reject an oversized body safely.");
+  }
+  const healthAfterOversizedOAuth = await fetch(`${appOrigin}/health`);
+  if (!healthAfterOversizedOAuth.ok) {
+    throw new Error("The service stopped responding after an oversized OAuth body.");
+  }
+  const oversizedChunked = await fetch(`${appOrigin}/oauth/token`, {
+    method: "POST",
+    headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: new ReadableStream({
+      start(controller) {
+        controller.enqueue(Buffer.from(`grant_type=${"x".repeat(70 * 1024)}`));
+        controller.close();
+      },
+    }),
+    duplex: "half",
+  });
+  if (
+    oversizedChunked.status !== 413 ||
+    (await oversizedChunked.json()).error !== "invalid_request"
+  ) {
+    throw new Error("Chunked OAuth input did not respect the body-size limit.");
+  }
+
+  for (const redirectUri of [
+    "https://example.org/callback",
+    "https://chatgpt.com.evil.example/connector/oauth/smoke-callback",
+  ]) {
+    const unsafeRegistration = await fetch(`${appOrigin}/oauth/register`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        client_name: "Pretend ChatGPT client",
+        redirect_uris: [redirectUri],
+      }),
+    });
+    const unsafeBody = await unsafeRegistration.json();
+    if (
+      unsafeRegistration.status !== 400 ||
+      unsafeBody.error !== "invalid_redirect_uri"
+    ) {
+      throw new Error(`Unsafe OAuth callback was accepted: ${redirectUri}`);
+    }
+  }
+
+  for (const redirectUri of [
+    "https://chatgpt.com/connector_platform_oauth_redirect",
+    "http://127.0.0.1:54321/oauth/callback",
+  ]) {
+    const compatibleRegistration = await fetch(`${appOrigin}/oauth/register`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        client_name: "Compatible smoke client",
+        redirect_uris: [redirectUri],
+      }),
+    });
+    if (compatibleRegistration.status !== 201) {
+      throw new Error(`Supported OAuth callback was rejected: ${redirectUri}`);
+    }
   }
 
   const registration = await fetch(`${appOrigin}/oauth/register`, {
@@ -157,7 +242,13 @@ try {
   });
   const consent = await fetch(authorize);
   const consentCsp = consent.headers.get("content-security-policy") || "";
-  if (!consent.ok || !(await consent.text()).includes("Owner code")) {
+  const consentHtml = await consent.text();
+  if (
+    !consent.ok ||
+    !consentHtml.includes("Owner code") ||
+    !consentHtml.includes("Requested by ChatGPT") ||
+    !consentHtml.includes("Callback: https://chatgpt.com")
+  ) {
     throw new Error("OAuth consent page did not render.");
   }
   if (
@@ -319,7 +410,7 @@ try {
   if (logs.includes("owner-code-for-local-smoke") || logs.includes(tokens.access_token)) {
     throw new Error("A secret leaked into server logs.");
   }
-  console.log("OAuth, empty GIPHY fallback, mobile native image, upload, edit, hide, refresh rotation, and widget resource are valid.");
+  console.log("OAuth callback allowlist, oversized-body resilience, GIPHY fallback, mobile image, upload, edit, hide, refresh rotation, and widget resource are valid.");
 } finally {
   const childExit = child.exitCode === null ? once(child, "exit") : Promise.resolve();
   const upstreamClosed = upstream.listening
