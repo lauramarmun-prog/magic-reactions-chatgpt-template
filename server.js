@@ -39,7 +39,7 @@ import {
 import { memoryObject, storageDriver } from "./lib/object-store.js";
 
 const APP_NAME = "Magic Reactions";
-const APP_VERSION = "0.1.2";
+const APP_VERSION = "0.2.0";
 const MCP_PATH = "/mcp";
 const WIDGET_DIAGNOSTIC_PATH = "/api/widget-diagnostic";
 const WIDGET_DIAGNOSTIC_PLACEHOLDER =
@@ -74,6 +74,15 @@ const LEGACY_TEMPLATE_URIS = [];
 const PORT = Number(process.env.PORT ?? 8787);
 const GIPHY_API_ORIGIN =
   process.env.GIPHY_API_ORIGIN?.trim() || "https://api.giphy.com";
+
+function configurationStatus() {
+  return {
+    giphyConfigured: Boolean(process.env.GIPHY_API_KEY?.trim()),
+    collectionConfigured: collectionConfigured(),
+    collectionAdminConfigured: collectionAdminConfigured(),
+    oauthConfigured: oauthConfigured(),
+  };
+}
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
 const widgetTemplate = readFileSync(
@@ -1261,14 +1270,12 @@ const httpServer = createServer(async (req, res) => {
     req.method === "GET" &&
     (url.pathname === "/" || url.pathname === "/health")
   ) {
+    const configuration = configurationStatus();
     const body = JSON.stringify({
       name: APP_NAME,
       version: APP_VERSION,
       status: "ok",
-      giphyConfigured: Boolean(process.env.GIPHY_API_KEY?.trim()),
-      collectionConfigured: collectionConfigured(),
-      collectionAdminConfigured: collectionAdminConfigured(),
-      oauthConfigured: oauthConfigured(),
+      ...configuration,
       mcp: MCP_PATH,
     });
     res
@@ -1288,6 +1295,24 @@ const httpServer = createServer(async (req, res) => {
     res
       .writeHead(200, { "content-type": "text/html; charset=utf-8" })
       .end(renderReactionHtml());
+    return;
+  }
+
+  if (req.method === "GET" && url.pathname === "/ready") {
+    const configuration = configurationStatus();
+    const ready = Object.values(configuration).every(Boolean);
+    const body = JSON.stringify({
+      name: APP_NAME,
+      version: APP_VERSION,
+      status: ready ? "ready" : "not-ready",
+      ...configuration,
+    });
+    res
+      .writeHead(ready ? 200 : 503, {
+        "content-type": "application/json; charset=utf-8",
+        "cache-control": "no-store",
+      })
+      .end(body);
     return;
   }
 

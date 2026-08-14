@@ -113,11 +113,60 @@ try {
   const health = await waitForHealth();
   if (
     health.name !== "Magic Reactions" ||
-    health.version !== "0.1.2" ||
+    health.version !== "0.2.0" ||
     !health.oauthConfigured ||
     !health.collectionConfigured
   ) {
     throw new Error(`Unexpected health response: ${JSON.stringify(health)}`);
+  }
+
+  const readiness = await fetch(`${appOrigin}/ready`);
+  const readinessBody = await readiness.json();
+  if (!readiness.ok || readinessBody.status !== "ready") {
+    throw new Error(`Unexpected readiness response: ${JSON.stringify(readinessBody)}`);
+  }
+
+  const unreadyPort = await freePort();
+  const unreadyOrigin = `http://127.0.0.1:${unreadyPort}`;
+  const unreadyChild = spawn(process.execPath, ["server.js"], {
+    cwd: new URL("../", import.meta.url),
+    env: {
+      ...process.env,
+      PORT: String(unreadyPort),
+      PUBLIC_BASE_URL: "",
+      OWNER_CODE: "",
+      OAUTH_SIGNING_SECRET: "",
+      GIPHY_API_KEY: "",
+      DATABASE_DRIVER: "memory",
+      STORAGE_DRIVER: "memory",
+    },
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+  let unreadyLogs = "";
+  unreadyChild.stdout.on("data", (chunk) => (unreadyLogs += chunk));
+  unreadyChild.stderr.on("data", (chunk) => (unreadyLogs += chunk));
+  try {
+    let unreadyResponse;
+    for (let attempt = 0; attempt < 80; attempt += 1) {
+      try {
+        unreadyResponse = await fetch(`${unreadyOrigin}/ready`);
+        break;
+      } catch {}
+      await new Promise((resolve) => setTimeout(resolve, 50));
+    }
+    if (!unreadyResponse) {
+      throw new Error(`Unconfigured server did not start.\n${unreadyLogs}`);
+    }
+    const unreadyBody = await unreadyResponse.json();
+    if (unreadyResponse.status !== 503 || unreadyBody.status !== "not-ready") {
+      throw new Error(`Incomplete configuration passed readiness: ${JSON.stringify(unreadyBody)}`);
+    }
+  } finally {
+    const unreadyExit = unreadyChild.exitCode === null
+      ? once(unreadyChild, "exit")
+      : Promise.resolve();
+    unreadyChild.kill();
+    await Promise.allSettled([unreadyExit]);
   }
 
   const anonymous = await fetch(`${appOrigin}/mcp`, {
