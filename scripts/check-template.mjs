@@ -7,7 +7,7 @@ async function text(path) {
   return readFile(new URL(path, root), "utf8");
 }
 
-const [packageText, lockText, server, oauth, railwayText, readme, envExample] =
+const [packageText, lockText, server, oauth, railwayText, readme, envExample, license] =
   await Promise.all([
     text("package.json"),
     text("package-lock.json"),
@@ -16,6 +16,7 @@ const [packageText, lockText, server, oauth, railwayText, readme, envExample] =
     text("railway.json"),
     text("README.md"),
     text(".env.example"),
+    text("LICENSE"),
   ]);
 
 const packageJson = JSON.parse(packageText);
@@ -36,6 +37,13 @@ requireCondition(
   packageLock.version === packageJson.version &&
     packageLock.packages?.[""]?.version === packageJson.version,
   "package-lock versions must match package.json",
+);
+requireCondition(
+  packageJson.license === "MIT" &&
+    readme.includes("[MIT License](LICENSE)") &&
+    license.includes("MIT License") &&
+    license.includes("Copyright (c) 2026 Magic Reactions contributors"),
+  "the public template must carry the approved MIT license",
 );
 requireCondition(
   railway.deploy?.healthcheckPath === "/ready",

@@ -166,5 +166,8 @@ PostgreSQL volume.
 Before marketplace publication, perform one final clean deployment from the
 private template, enter a fresh GIPHY key, connect its new `/mcp` URL in ChatGPT,
 and repeat the mobile send-and-upload check. Keep the template private until
-that acceptance test passes. An explicit open-source license must also be chosen
-before making the source repository public.
+that acceptance test passes.
+
+## License
+
+Magic Reactions for ChatGPT is available under the [MIT License](LICENSE).
