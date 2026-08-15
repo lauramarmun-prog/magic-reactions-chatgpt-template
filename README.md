@@ -66,18 +66,30 @@ app service with these variables:
 | `REGION` | Reference to the Bucket variable | yes |
 | `ENDPOINT` | Reference to the Bucket variable | yes |
 
-For a Railway Template, mark only `GIPHY_API_KEY` as a required user input.
-Generate `OWNER_CODE` and `OAUTH_SIGNING_SECRET` with Railway's template secret
-generator, and use reference variables for PostgreSQL and Bucket credentials.
+The private Railway template draft has been checked against a real deployment.
+It creates the web service, PostgreSQL with its persistent volume, and one
+private Bucket. Only `GIPHY_API_KEY` is requested from the installer. The draft
+uses these preconfigured values:
 
-Railway's template composer must still be checked once with this private
-prototype: if the composer does not preserve a Bucket resource automatically,
-the deploy instructions should include one extra **Add Bucket** click. The app
-itself already supports the official Bucket environment-variable contract.
+| Variable | Template value |
+| --- | --- |
+| `PUBLIC_BASE_URL` | `https://${{RAILWAY_PUBLIC_DOMAIN}}` |
+| `OWNER_CODE` | `${{ secret(32) }}` |
+| `OAUTH_SIGNING_SECRET` | `${{ secret(64) }}` |
+| `DATABASE_URL` | `${{Postgres Live.DATABASE_URL}}` |
+| Bucket credentials | References to the matching `Reactions Bucket` variables |
+| `DATABASE_DRIVER` / `STORAGE_DRIVER` | `postgres` / `s3` |
+| `S3_FORCE_PATH_STYLE` | `false` |
+
+For example, the Bucket name is referenced as
+`${{Reactions Bucket.BUCKET}}`; the access key, secret, region, and endpoint use
+the same service-reference pattern. Generated secrets are unique to every
+deployment and are not copied from the prototype.
 
 ## Connect to ChatGPT
 
-1. Deploy and wait for `GET /health` to report `status: "ok"`.
+1. Deploy and wait for Railway's `GET /ready` check to pass. `GET /health`
+   remains available for configuration diagnostics.
 2. In ChatGPT Developer Mode, add `https://YOUR-DOMAIN/mcp`.
 3. Choose OAuth when prompted.
 4. The consent page opens on this service. Enter `OWNER_CODE`.
@@ -146,5 +158,16 @@ exercises OAuth discovery, client registration, PKCE consent, token rotation,
 anonymous rejection, tool listing, empty-collection GIPHY fallback, native image
 fallback, chat upload, edit, hide, and widget resource metadata.
 
-The final host loop in ChatGPT and the Railway template-composer Bucket behavior
-must be tested after creating the private Railway project.
+The private prototype has completed the real ChatGPT loop on desktop and mobile:
+OAuth connection, collection reactions, GIPHY fallback, chat upload, edit, and
+hide. The Railway composer also preserves the single private Bucket and
+PostgreSQL volume.
+
+Before marketplace publication, perform one final clean deployment from the
+private template, enter a fresh GIPHY key, connect its new `/mcp` URL in ChatGPT,
+and repeat the mobile send-and-upload check. Keep the template private until
+that acceptance test passes.
+
+## License
+
+Magic Reactions for ChatGPT is available under the [MIT License](LICENSE).

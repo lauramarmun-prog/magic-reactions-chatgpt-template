@@ -1,13 +1,14 @@
 {
   "name": "magic-reactions-chatgpt-template",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "description": "A private Railway template for personal GIF and sticker reactions in ChatGPT.",
+  "license": "MIT",
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "check": "node --check server.js && node --check lib/db.js && node --check lib/object-store.js && node --check lib/collection-store.js && node --check lib/oauth.js && node scripts/check-clean.mjs",
+    "check": "node --check server.js && node --check lib/db.js && node --check lib/object-store.js && node --check lib/collection-store.js && node --check lib/oauth.js && node scripts/check-clean.mjs && node scripts/check-template.mjs",
     "smoke": "node scripts/smoke.mjs"
   },
   "engines": {
