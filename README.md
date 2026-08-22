@@ -24,7 +24,7 @@ short-lived signed URLs. PostgreSQL never stores raw image bytes.
 - Keep the collection under the deployer's control.
 - Use one private OAuth connection across ChatGPT desktop and mobile.
 - Avoid putting images or secrets in the Git repository.
-- Preserve a native MCP image fallback when a host does not mount the widget.
+- Render reactions through the ChatGPT MCP App widget on desktop and mobile.
 - Start with an empty collection and add only the deployer's own content.
 
 ## Common Use Cases
@@ -155,8 +155,8 @@ migrations/               explicit PostgreSQL schema reference
 
 The repository includes static/syntax checks and a local runtime smoke test that
 exercises OAuth discovery, client registration, PKCE consent, token rotation,
-anonymous rejection, tool listing, empty-collection GIPHY fallback, native image
-fallback, chat upload, edit, hide, and widget resource metadata.
+anonymous rejection, tool listing, empty-collection GIPHY fallback, widget-only
+reaction results, chat upload, edit, hide, and widget resource metadata.
 
 The private prototype has completed the real ChatGPT loop on desktop and mobile:
 OAuth connection, collection reactions, GIPHY fallback, chat upload, edit, and

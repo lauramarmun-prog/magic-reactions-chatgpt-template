@@ -9,7 +9,6 @@ import {
 } from "@modelcontextprotocol/ext-apps/server";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import sharp from "sharp";
 import { ListToolsRequestSchema } from "@modelcontextprotocol/sdk/types.js";
 import { z } from "zod";
 import {
@@ -39,7 +38,7 @@ import {
 import { memoryObject, storageDriver } from "./lib/object-store.js";
 
 const APP_NAME = "Magic Reactions";
-const APP_VERSION = "0.2.0";
+const APP_VERSION = "0.2.1";
 const MCP_PATH = "/mcp";
 const WIDGET_DIAGNOSTIC_PATH = "/api/widget-diagnostic";
 const WIDGET_DIAGNOSTIC_PLACEHOLDER =
@@ -109,19 +108,6 @@ const chatGptImageSchema = z.object({
   file_name: z.string().optional(),
 });
 const MAX_CHATGPT_IMAGE_BYTES = 8 * 1024 * 1024;
-const MAX_NATIVE_REACTION_BYTES = 8 * 1024;
-const MAX_NATIVE_REACTION_SOURCE_BYTES = 4 * 1024 * 1024;
-const MAX_REACTION_RESULT_BYTES = 20_000;
-const NATIVE_REACTION_TIMEOUT_MS = 2_000;
-const NATIVE_REACTION_PROFILES = [
-  { size: 160, quality: 55 },
-  { size: 144, quality: 45 },
-  { size: 128, quality: 38 },
-  { size: 112, quality: 32 },
-  { size: 96, quality: 26 },
-  { size: 80, quality: 20 },
-  { size: 64, quality: 16 },
-];
 
 function canDownloadChatGptImage(url) {
   if (url.protocol === "https:") return true;
@@ -162,111 +148,6 @@ async function downloadChatGptImage(image) {
     throw new Error("La imagen debe pesar entre 1 byte y 8 MB.");
   }
   return { bytes, mimeType };
-}
-
-async function nativeReactionImageContent(imageUrl) {
-  const url = new URL(imageUrl);
-  if (!canDownloadChatGptImage(url)) {
-    throw new Error("La imagen nativa de la reacción debe usar HTTPS.");
-  }
-
-  const response = await fetch(url, {
-    signal: AbortSignal.timeout(NATIVE_REACTION_TIMEOUT_MS),
-    redirect: "follow",
-    headers: {
-      accept: "image/webp,image/gif,image/png,image/jpeg;q=0.8",
-    },
-  });
-  if (!response.ok) {
-    throw new Error(`La imagen nativa respondió ${response.status}.`);
-  }
-  if (!canDownloadChatGptImage(new URL(response.url))) {
-    throw new Error("La imagen nativa redirigió a una dirección no segura.");
-  }
-
-  const mimeType = String(response.headers.get("content-type") || "")
-    .split(";", 1)[0]
-    .trim()
-    .toLowerCase();
-  if (!/^image\/(?:gif|webp|png|jpeg)$/.test(mimeType)) {
-    throw new Error("La reacción nativa no tiene un formato de imagen compatible.");
-  }
-
-  const announcedSize = Number(response.headers.get("content-length") || 0);
-  if (announcedSize > MAX_NATIVE_REACTION_SOURCE_BYTES) {
-    await response.body?.cancel();
-    throw new Error("La reacción nativa supera el límite de entrada de 4 MiB.");
-  }
-
-  if (!response.body) {
-    throw new Error("La reacción nativa llegó vacía.");
-  }
-  const chunks = [];
-  let receivedBytes = 0;
-  const reader = response.body.getReader();
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    receivedBytes += value.byteLength;
-    if (receivedBytes > MAX_NATIVE_REACTION_SOURCE_BYTES) {
-      await reader.cancel();
-      throw new Error("La reacción nativa supera el límite de entrada de 4 MiB.");
-    }
-    chunks.push(Buffer.from(value));
-  }
-  if (!receivedBytes) {
-    throw new Error("La reacción nativa llegó vacía.");
-  }
-  let bytes = Buffer.concat(chunks, receivedBytes);
-  let outputMimeType = mimeType;
-
-  if (bytes.byteLength > MAX_NATIVE_REACTION_BYTES) {
-    let compressed;
-    for (const { size, quality } of NATIVE_REACTION_PROFILES) {
-      const candidate = await sharp(bytes, {
-        animated: false,
-        page: 0,
-        pages: 1,
-        limitInputPixels: 16_777_216,
-        sequentialRead: true,
-      })
-        .rotate()
-        .resize({
-          width: size,
-          height: size,
-          fit: "inside",
-          withoutEnlargement: true,
-        })
-        .webp({
-          quality,
-          alphaQuality: Math.max(quality, 35),
-          effort: 4,
-          smartSubsample: true,
-        })
-        .toBuffer();
-      if (candidate.byteLength <= MAX_NATIVE_REACTION_BYTES) {
-        compressed = candidate;
-        break;
-      }
-    }
-    if (!compressed?.byteLength) {
-      throw new Error("No pude reducir la reacción nativa por debajo de 8 KiB.");
-    }
-    bytes = compressed;
-    outputMimeType = "image/webp";
-  }
-
-  console.info(
-    `[MCP] native-image prepared sourceBytes=${receivedBytes} ` +
-      `outputBytes=${bytes.byteLength} mime=${outputMimeType}`,
-  );
-
-  return {
-    type: "image",
-    data: bytes.toString("base64"),
-    mimeType: outputMimeType,
-    annotations: { audience: ["user"], priority: 1 },
-  };
 }
 
 const pickerOutputSchema = {
@@ -483,17 +364,6 @@ function registerMagicTools(server) {
           kind,
           rating,
         });
-        let nativeReactionImage;
-        try {
-          nativeReactionImage = await nativeReactionImageContent(
-            selectedReaction.imageUrl,
-          );
-        } catch (error) {
-          console.warn(
-            "Native reaction image unavailable:",
-            error instanceof Error ? error.message : error,
-          );
-        }
         const result = {
           content: [
             {
@@ -516,21 +386,10 @@ function registerMagicTools(server) {
             reaction: selectedReaction,
           },
         };
-        if (nativeReactionImage) {
-          const resultWithNativeImage = {
-            ...result,
-            content: [...result.content, nativeReactionImage],
-          };
-          if (
-            Buffer.byteLength(JSON.stringify(resultWithNativeImage), "utf8") <
-            MAX_REACTION_RESULT_BYTES
-          ) {
-            return resultWithNativeImage;
-          }
-          console.warn(
-            "Native reaction image omitted to keep the MCP result below 20 KB.",
-          );
-        }
+        // ChatGPT renders this reaction through the attached MCP App widget.
+        // Do not also return a native `content.image` block: current ChatGPT
+        // clients can reject that otherwise-valid MCP response shape as an
+        // "Unexpected response type" before the widget receives the result.
         return result;
       } catch (error) {
         return {

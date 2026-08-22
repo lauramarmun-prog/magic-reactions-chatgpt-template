@@ -113,7 +113,7 @@ try {
   const health = await waitForHealth();
   if (
     health.name !== "Magic Reactions" ||
-    health.version !== "0.2.0" ||
+    health.version !== "0.2.1" ||
     !health.oauthConfigured ||
     !health.collectionConfigured
   ) {
@@ -380,9 +380,10 @@ try {
   );
   if (
     firstReaction.structuredContent?.selectedReaction?.source !== "giphy" ||
-    !firstReaction.content?.some((item) => item.type === "image")
+    firstReaction.content?.length !== 1 ||
+    firstReaction.content?.[0]?.type !== "text"
   ) {
-    throw new Error(`Empty collection did not fall back to GIPHY with a native image: ${JSON.stringify(firstReaction)}`);
+    throw new Error(`Empty collection did not fall back to GIPHY through the widget: ${JSON.stringify(firstReaction)}`);
   }
 
   const saved = await rpc(
@@ -459,7 +460,7 @@ try {
   if (logs.includes("owner-code-for-local-smoke") || logs.includes(tokens.access_token)) {
     throw new Error("A secret leaked into server logs.");
   }
-  console.log("OAuth callback allowlist, oversized-body resilience, GIPHY fallback, mobile image, upload, edit, hide, refresh rotation, and widget resource are valid.");
+  console.log("OAuth callback allowlist, oversized-body resilience, GIPHY fallback, widget-only reaction, upload, edit, hide, refresh rotation, and widget resource are valid.");
 } finally {
   const childExit = child.exitCode === null ? once(child, "exit") : Promise.resolve();
   const upstreamClosed = upstream.listening
